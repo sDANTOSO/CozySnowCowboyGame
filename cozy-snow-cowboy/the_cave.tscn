@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ubmekbsxycu"]
+
+[ext_resource type="Texture2D" uid="uid://c36d1ls4j7vbb" path="res://Snowy Land Asset Pack/Screenshot 2026-01-23 230225.png" id="1_pu3qd"]
+
+[node name="the_cave" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(728, 310.00003)
+scale = Vector2(19.405062, 23.82927)
+texture = ExtResource("1_pu3qd")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5jticawvyf7a"]
+
+[ext_resource type="Script" uid="uid://237fpuovmgbv" path="res://cave.gd" id="1_ads45"]
+[ext_resource type="Texture2D" uid="uid://csadweunl7d25" path="res://pixil-frame-0.png" id="2_shk3w"]
+
+[node name="cave" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_ads45")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(288.5, 148)
+scale = Vector2(1.11, 1.016)
+texture = ExtResource("2_shk3w")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(225, 105, 291, 108, 357, 147, 425, 251, 494, 371, 384, 378, 392, 326, 354, 236, 322, 197, 274, 195, 229, 251, 192, 313, 185, 376, 45, 365, 118, 284, 144, 204, 162, 161)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(277, 199, 234, 248, 198, 307, 187, 373, 381, 379, 389, 328, 350, 235, 319, 197)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

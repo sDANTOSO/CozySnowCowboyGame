@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://5fj8vw51ttiq"]
 
-[ext_resource type="Script" uid="uid://b0beaunqnbmdw" path="res://maincharacter.gd" id="1_0aigr"]
+[ext_resource type="Script" uid="uid://ct5r4iipjjje2" path="res://Lingeringcharacter.gd" id="1_0aigr"]
 [ext_resource type="Texture2D" uid="uid://dss0jptvl41f5" path="res://lucia-barrero-habilidx-sam-removebg-preview.png" id="1_l7kkk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0aigr"]
