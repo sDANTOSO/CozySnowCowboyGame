@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba46857hx57bh"]
+
+[ext_resource type="PackedScene" uid="uid://bua6thnyrktmw" path="res://Scenes/the_main.tscn" id="1_pv3w6"]
+[ext_resource type="PackedScene" uid="uid://dgj5najb6c1qp" path="res://Scenes/the_snow.tscn" id="2_3v7dj"]
+
+[node name="theMain" instance=ExtResource("1_pv3w6")]
+
+[node name="The snow" parent="." index="0" instance=ExtResource("2_3v7dj")]

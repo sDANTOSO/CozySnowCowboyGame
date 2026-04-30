@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5jticawvyf7a"]
 
-[ext_resource type="Script" uid="uid://237fpuovmgbv" path="res://cave.gd" id="1_ads45"]
-[ext_resource type="Texture2D" uid="uid://csadweunl7d25" path="res://pixil-frame-0.png" id="2_shk3w"]
+[ext_resource type="Script" uid="uid://237fpuovmgbv" path="res://Scripts/cave.gd" id="1_ads45"]
+[ext_resource type="Texture2D" uid="uid://csadweunl7d25" path="res://Assets/pixil-frame-0.png" id="2_shk3w"]
 
 [node name="cave" type="StaticBody2D"]
 collision_layer = 4

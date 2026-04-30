@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy6wgo4jo71y0"
-path="res://.godot/imported/pixilart-drawing.png-9e9c431ac86a42d1fefc4da3ac6bc15c.ctex"
+uid="uid://qko46x7kdxu0"
+path="res://.godot/imported/ROCKMAP.png-a6510d12f907454a3d1059e4895015e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixilart-drawing.png"
-dest_files=["res://.godot/imported/pixilart-drawing.png-9e9c431ac86a42d1fefc4da3ac6bc15c.ctex"]
+source_file="res://Assets/ROCKMAP.png"
+dest_files=["res://.godot/imported/ROCKMAP.png-a6510d12f907454a3d1059e4895015e6.ctex"]
 
 [params]
 

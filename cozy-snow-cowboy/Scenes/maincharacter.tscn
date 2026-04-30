@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://5fj8vw51ttiq"]
+
+[ext_resource type="Script" uid="uid://ct5r4iipjjje2" path="res://Scripts/Lingeringcharacter.gd" id="1_flaqb"]
+[ext_resource type="Texture2D" uid="uid://dss0jptvl41f5" path="res://Assets/lucia-barrero-habilidx-sam-removebg-preview.png" id="2_3ommq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0aigr"]
+height = 24.0
+
+[node name="Maincharacter" type="CharacterBody2D"]
+position = Vector2(2, 0)
+collision_mask = 31
+script = ExtResource("1_flaqb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-50.3125, 30)
+scale = Vector2(0.093992256, 0.0878553)
+texture = ExtResource("2_3ommq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-61, 32)
+shape = SubResource("CapsuleShape2D_0aigr")

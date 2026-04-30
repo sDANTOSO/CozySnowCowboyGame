@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csadweunl7d25"
-path="res://.godot/imported/pixil-frame-0.png-ad73aed19b00fd55eeaf2db0cae8f8ff.ctex"
+uid="uid://tc0r2lkhckbc"
+path="res://.godot/imported/CSBBackground.png-ec7e1893ee7ea05058b2d5de9d8f2499.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-ad73aed19b00fd55eeaf2db0cae8f8ff.ctex"]
+source_file="res://Assets/CSBBackground.png"
+dest_files=["res://.godot/imported/CSBBackground.png-ec7e1893ee7ea05058b2d5de9d8f2499.ctex"]
 
 [params]
 

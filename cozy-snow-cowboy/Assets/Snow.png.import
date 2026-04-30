@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d268oj5ptdlkc"
-path="res://.godot/imported/seamless-pixelated-snow-texture-mapping-background-wallpaper-various-digital-applications-seamless-pixelated-snow-texture-115261436.webp-357735f0c6617336516a1860a4fe6efa.ctex"
+uid="uid://b7j4kjsq5sc1s"
+path="res://.godot/imported/Snow.png-add44c480d30caa289e22791d926d123.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://seamless-pixelated-snow-texture-mapping-background-wallpaper-various-digital-applications-seamless-pixelated-snow-texture-115261436.webp"
-dest_files=["res://.godot/imported/seamless-pixelated-snow-texture-mapping-background-wallpaper-various-digital-applications-seamless-pixelated-snow-texture-115261436.webp-357735f0c6617336516a1860a4fe6efa.ctex"]
+source_file="res://Assets/Snow.png"
+dest_files=["res://.godot/imported/Snow.png-add44c480d30caa289e22791d926d123.ctex"]
 
 [params]
 

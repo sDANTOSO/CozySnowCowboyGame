@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dss0jptvl41f5"
-path="res://.godot/imported/lucia-barrero-habilidx-sam-removebg-preview.png-4c5bf6fb096f9493af744acafbc31b7e.ctex"
+uid="uid://bqs6tkwfk7hcx"
+path="res://.godot/imported/WaterBackgrou2nd.png-8a19b02a48bfa6e34879a01147895678.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://lucia-barrero-habilidx-sam-removebg-preview.png"
-dest_files=["res://.godot/imported/lucia-barrero-habilidx-sam-removebg-preview.png-4c5bf6fb096f9493af744acafbc31b7e.ctex"]
+source_file="res://Assets/WaterBackgrou2nd.png"
+dest_files=["res://.godot/imported/WaterBackgrou2nd.png-8a19b02a48bfa6e34879a01147895678.ctex"]
 
 [params]
 
