@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://dr5sls6odbsso"]
+
+[ext_resource type="Script" uid="uid://crabjdeuda0wt" path="res://top.gd" id="1_85w6k"]
+[ext_resource type="Texture2D" uid="uid://dvpf1yd6ehojq" path="res://Assets/CryoTopHalf.png" id="1_kwju0"]
+[ext_resource type="Texture2D" uid="uid://kgbia04cxwam" path="res://Assets/CryoBottomHalf.png" id="2_85w6k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5bm8"]
+size = Vector2(32, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jrra5"]
+size = Vector2(32, 8)
+
+[node name="CryoBox" type="Node2D"]
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(-63, 40)
+node_a = NodePath("Top")
+node_b = NodePath("Bottom")
+disable_collision = false
+angular_limit_upper = 0.7853982
+motor_target_velocity = 0.017453292
+
+[node name="Top" type="RigidBody2D" parent="PinJoint2D"]
+position = Vector2(-303, 30)
+collision_layer = 4
+collision_mask = 63
+gravity_scale = 0.0
+script = ExtResource("1_85w6k")
+
+[node name="CryoTopHalf" type="Sprite2D" parent="PinJoint2D/Top"]
+position = Vector2(288, -37)
+rotation = -0.006584056
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("1_kwju0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PinJoint2D/Top"]
+position = Vector2(288, -33)
+shape = SubResource("RectangleShape2D_p5bm8")
+
+[node name="Bottom" type="RigidBody2D" parent="PinJoint2D"]
+position = Vector2(-261, 30)
+gravity_scale = 0.0
+
+[node name="CryoBottomHalf" type="Sprite2D" parent="PinJoint2D/Bottom"]
+position = Vector2(246, -37)
+texture = ExtResource("2_85w6k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PinJoint2D/Bottom"]
+position = Vector2(246, -25)
+shape = SubResource("RectangleShape2D_jrra5")

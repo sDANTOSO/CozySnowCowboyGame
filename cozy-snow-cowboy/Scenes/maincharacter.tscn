@@ -8,7 +8,7 @@ height = 24.0
 
 [node name="Maincharacter" type="CharacterBody2D"]
 position = Vector2(2, 0)
-collision_mask = 31
+collision_mask = 63
 script = ExtResource("1_flaqb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

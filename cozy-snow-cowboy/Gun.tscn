@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8k2npvrm0i03"]
+
+[ext_resource type="Texture2D" uid="uid://dsd6hm7cik32o" path="res://Assets/gun1.png" id="1_jpqjm"]
+
+[node name="Gun" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 63
+
+[node name="Gun1" type="Sprite2D" parent="."]
+position = Vector2(16, -9)
+texture = ExtResource("1_jpqjm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-16, -18)
+polygon = PackedVector2Array(37, 1, 44, 1, 44, 12, 37, 12, 25, 10, 23, 16, 21, 16, 18, 5, 17, 2, 21, 2, 21, 3, 35, 3)
