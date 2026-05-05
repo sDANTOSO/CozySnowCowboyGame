@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://dgj5najb6c1qp"]
+[gd_scene load_steps=37 format=4 uid="uid://dgj5najb6c1qp"]
 
 [ext_resource type="Script" uid="uid://dbq456b26kpxx" path="res://Scenes/the_snow.gd" id="1_7s3q5"]
 [ext_resource type="Texture2D" uid="uid://tc0r2lkhckbc" path="res://Assets/CSBBackground.png" id="1_sknuc"]
@@ -16,6 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://dfssmvydse2ag" path="res://Assets/Marsh2.png" id="14_4a43q"]
 [ext_resource type="Texture2D" uid="uid://p6e833qd1vwv" path="res://Assets/capybara1.png" id="15_4a43q"]
 [ext_resource type="PackedScene" uid="uid://dr5sls6odbsso" path="res://cryo_box.tscn" id="16_7vwtk"]
+[ext_resource type="Texture2D" uid="uid://bumca2s7e3sx4" path="res://Assets/BlobFishv1.png" id="17_d6jkq"]
+[ext_resource type="Texture2D" uid="uid://c8x11tij0gtcc" path="res://Assets/Blobfishv2.png" id="18_revar"]
+[ext_resource type="Texture2D" uid="uid://bqwwl5l7bic4g" path="res://Assets/Blobfishv3.png" id="19_jckax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uy35t"]
 size = Vector2(93, 74)
@@ -191,6 +194,33 @@ sources/2 = SubResource("TileSetScenesCollectionSource_7s3q5")
 sources/3 = SubResource("TileSetAtlasSource_p61nb")
 sources/4 = SubResource("TileSetAtlasSource_aw70g")
 
+[sub_resource type="Curve" id="Curve_revar"]
+_data = [Vector2(0.019943021, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.6701674, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_jckax"]
+curve = SubResource("Curve_revar")
+
+[sub_resource type="Gradient" id="Gradient_revar"]
+offsets = PackedFloat32Array(0.4523077, 0.7476923)
+colors = PackedColorArray(0.9529412, 0.9529412, 0.9529412, 0.5921569, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jckax"]
+gradient = SubResource("Gradient_revar")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_revar"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(500, 1, 1)
+gravity = Vector3(-25, 98, 0)
+scale_max = 5.0
+color_initial_ramp = SubResource("GradientTexture1D_jckax")
+alpha_curve = SubResource("CurveTexture_jckax")
+turbulence_enabled = true
+turbulence_noise_speed_random = 0.0
+turbulence_influence_min = 0.020000001
+turbulence_influence_max = 0.080000006
+
 [node name="The snow" type="Node2D"]
 script = ExtResource("1_7s3q5")
 
@@ -203,7 +233,7 @@ max_distance = 16384.0
 
 [node name="Ground" type="Sprite2D" parent="."]
 texture_repeat = 2
-position = Vector2(83, -170)
+position = Vector2(78, -168.99998)
 scale = Vector2(1.6, 1.522)
 texture = ExtResource("1_sknuc")
 region_enabled = true
@@ -251,7 +281,7 @@ tile_set = SubResource("TileSet_p61nb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SnowArea"]
 
 [node name="theMain" parent="." instance=ExtResource("4_05bcc")]
-position = Vector2(32, 3)
+position = Vector2(32, 5)
 
 [node name="Fourmyle1" type="Sprite2D" parent="."]
 position = Vector2(-144, 7)
@@ -283,6 +313,28 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("15_4a43q")
 
 [node name="CryoBox" parent="." instance=ExtResource("16_7vwtk")]
+
+[node name="BlobFishv1" type="Sprite2D" parent="."]
+position = Vector2(-7, 44)
+scale = Vector2(0.234375, 0.25)
+texture = ExtResource("17_d6jkq")
+
+[node name="Blobfishv2" type="Sprite2D" parent="."]
+position = Vector2(8, 44)
+scale = Vector2(0.234375, 0.28125)
+texture = ExtResource("18_revar")
+
+[node name="Blobfishv3" type="Sprite2D" parent="."]
+position = Vector2(24.000002, 44)
+scale = Vector2(0.2580645, 0.28125)
+texture = ExtResource("19_jckax")
+
+[node name="SnowCreator" type="GPUParticles2D" parent="."]
+position = Vector2(0, -254)
+amount = 200
+lifetime = 10.15
+preprocess = 30.75
+process_material = SubResource("ParticleProcessMaterial_revar")
 
 [connection signal="player_entered_cave" from="cave" to="cave" method="_on_player_entered_cave"]
 [connection signal="body_entered" from="WaterArea/Area2D" to="." method="_on_area_2d_body_entered"]
