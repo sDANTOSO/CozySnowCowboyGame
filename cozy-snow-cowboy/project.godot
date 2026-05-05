@@ -63,6 +63,7 @@ jump={
 2d_physics/layer_4="Projectiles"
 2d_physics/layer_5="Items and zones"
 2d_physics/layer_6="Terrain"
+2d_physics/layer_7="Branch"
 
 [rendering]
 
