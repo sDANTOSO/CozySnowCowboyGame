@@ -216,7 +216,7 @@ particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(500, 50, 1)
 gravity = Vector3(-25, 98, 0)
-scale_max = 3.5
+scale_max = 3.6
 color_initial_ramp = SubResource("GradientTexture1D_jckax")
 alpha_curve = SubResource("CurveTexture_jckax")
 turbulence_enabled = true
@@ -340,7 +340,7 @@ occluder = SubResource("OccluderPolygon2D_revar")
 
 [node name="SnowCreator" type="GPUParticles2D" parent="."]
 position = Vector2(-47, -221)
-amount = 300
+amount = 600
 lifetime = 10.15
 preprocess = 30.75
 process_material = SubResource("ParticleProcessMaterial_revar")
