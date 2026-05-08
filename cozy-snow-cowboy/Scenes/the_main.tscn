@@ -10,3 +10,7 @@
 position = Vector2(-62, 62)
 offset = Vector2(0, -100)
 zoom = Vector2(2, 2)
+limit_left = -500
+limit_top = -9999980
+limit_right = 590
+limit_bottom = 10000020

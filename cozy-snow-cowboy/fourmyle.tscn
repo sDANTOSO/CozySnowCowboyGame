@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqlvwanlj647b"]
+
+[ext_resource type="Texture2D" uid="uid://bsxyx2igwi7wy" path="res://Assets/Fourmyle1.png" id="1_fqqmo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ykl54"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fqqmo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fourmyle" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_layer = 4
+collision_mask = 63
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D"]
+sprite_frames = SubResource("SpriteFrames_ykl54")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+visible = false
+polygon = PackedVector2Array(-23, 31, -31, 31, -35, 8, -35, 2, -20, -3, 7, 2, 18, -9, 25, -4, 11, 11, 10, 30, 3, 30, 0, 12, -10, 12, -22, 11, -25, 23)
