@@ -15,9 +15,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ml7vp"]
-radius = 6.0
-height = 18.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ji052"]
+size = Vector2(9, 20)
 
 [node name="Capybara" type="Node2D"]
 
@@ -41,6 +40,6 @@ scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("3_2o0kj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(-18, 10)
+position = Vector2(-18, 9.5)
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_ml7vp")
+shape = SubResource("RectangleShape2D_ji052")

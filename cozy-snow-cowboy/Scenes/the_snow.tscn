@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://dgj5najb6c1qp"]
+[gd_scene load_steps=33 format=4 uid="uid://dgj5najb6c1qp"]
 
 [ext_resource type="Script" uid="uid://dbq456b26kpxx" path="res://Scenes/the_snow.gd" id="1_7s3q5"]
 [ext_resource type="Texture2D" uid="uid://tc0r2lkhckbc" path="res://Assets/CSBBackground.png" id="1_sknuc"]
@@ -9,11 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://dqo84fv6fadxi" path="res://Assets/Snowv2.png" id="7_4hloa"]
 [ext_resource type="Texture2D" uid="uid://ch8a2ovch047g" path="res://Assets/Snow3.png" id="8_p61nb"]
 [ext_resource type="PackedScene" uid="uid://b8k2npvrm0i03" path="res://Gun.tscn" id="11_aw70g"]
-[ext_resource type="PackedScene" uid="uid://cfckt23m1v4da" path="res://tree.tscn" id="12_76ntv"]
 [ext_resource type="Texture2D" uid="uid://dhtdujkrgx7i0" path="res://Assets/Marsh1.png" id="13_0paly"]
 [ext_resource type="Texture2D" uid="uid://dfssmvydse2ag" path="res://Assets/Marsh2.png" id="14_4a43q"]
 [ext_resource type="PackedScene" uid="uid://cis5ryt48ehg0" path="res://blobfish.tscn" id="17_d6jkq"]
-[ext_resource type="PackedScene" uid="uid://ckrc2y7xwawng" path="res://capybara.tscn" id="19_revar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uy35t"]
 size = Vector2(93, 74)
@@ -301,9 +299,6 @@ visible = false
 position = Vector2(-300, 0)
 scale = Vector2(0.6, 0.6)
 
-[node name="Tree" parent="." instance=ExtResource("12_76ntv")]
-position = Vector2(265, -90)
-
 [node name="Marsh1" type="Sprite2D" parent="."]
 position = Vector2(234, 44)
 texture = ExtResource("13_0paly")
@@ -316,9 +311,6 @@ flip_h = true
 [node name="Marsh3" type="Sprite2D" parent="."]
 position = Vector2(226, 44)
 texture = ExtResource("14_4a43q")
-
-[node name="Capybara" parent="." instance=ExtResource("19_revar")]
-position = Vector2(335, -99)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 visible = false
