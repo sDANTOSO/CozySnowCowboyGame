@@ -22,7 +22,7 @@ polygon = PackedVector2Array(-4, 90, 85, 90, 88, 81, 83, 71, 85, 55, 79, 51, 79,
 collision_layer = 96
 collision_mask = 33
 mass = 9.725
-gravity_scale = 0.0
+gravity_scale = 0.2
 
 [node name="Sprite2D" type="Sprite2D" parent="TreeBranch"]
 position = Vector2(9, 15)

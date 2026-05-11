@@ -9,5 +9,6 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 
 
 func _on_area_2d_body_exited(_body: Node2D) -> void:
-	ProjectSettings.set_setting("physics/2d/default_gravity", 50)
+	ProjectSettings.set_setting("physics/2d/default_gravity", 50)# change this 
 	pass # Replace with function body.
+	
