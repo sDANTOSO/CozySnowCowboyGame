@@ -75,18 +75,6 @@ func _on_lasercooldown_timeout() -> void:
 
 
 
-	
-
-
-
-		
-	
-		
-	
-	
-	
-
-
 func _on_fourmyle_player_dont_flip_h() -> void:
 	sprite.flip_h=false
 	pass # Replace with function body.

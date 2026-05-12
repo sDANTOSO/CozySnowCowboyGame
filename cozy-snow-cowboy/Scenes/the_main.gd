@@ -18,5 +18,5 @@ func create_laser(pos,direction):
 		laser.rotation_degrees = rad_to_deg(direction.angle())#+ 90
 		laser.direction =direction
 		var laser1= laser
-		$Projectiles.add_child(laser1)
-		pass 
+		$Projectiles.add_child(laser)
+		
