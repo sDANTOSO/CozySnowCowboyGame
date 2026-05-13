@@ -41,14 +41,19 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
 	direction1 = Input.get_vector("left", "right","up","down")
+	
 	if direction:
 		velocity.x = direction * SPEED
+		animated_sprite_2d.play("Walking")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	#while velocity.x > 0:
+		
 
 	move_and_slide()
 	update_facing_direction()
-	pass # Replace with function body.
+	
 	
 func update_facing_direction()  :
 	if direction1.x > 0 :
@@ -79,6 +84,9 @@ func _flip_h():
 	
 func dont_flip_h():
 	player_dont_flip_h.emit()
+	
+func animation():
+	print()
 	
 func dismount():
 	inUse = false

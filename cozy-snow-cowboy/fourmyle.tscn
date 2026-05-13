@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cqlvwanlj647b"]
+[gd_scene format=3 uid="uid://cqlvwanlj647b"]
 
 [ext_resource type="Texture2D" uid="uid://bsxyx2igwi7wy" path="res://Assets/Fourmyle1.png" id="1_fqqmo"]
 [ext_resource type="Script" uid="uid://dm2ixstjo1kug" path="res://Fourmyle.gd" id="1_ykl54"]
@@ -79,30 +79,27 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqqmo"]
 size = Vector2(6, 5)
 
-[node name="Fourmyle" type="CharacterBody2D"]
+[node name="Fourmyle" type="CharacterBody2D" unique_id=1025512075]
 collision_layer = 4
 collision_mask = 63
 script = ExtResource("1_ykl54")
 
-[node name="RiderContainer" type="Node2D" parent="."]
+[node name="RiderContainer" type="Node2D" parent="." unique_id=1473375173]
 
-[node name="RiderPosition" type="Marker2D" parent="."]
+[node name="RiderPosition" type="Marker2D" parent="." unique_id=2008488637]
 position = Vector2(0, -10)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1603332476]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_ykl54")
-animation = &"Walking"
-frame = 7
-frame_progress = 0.18282773
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=104172654]
 visible = false
 polygon = PackedVector2Array(-23, 31, -31, 31, -35, 8, -35, 2, -20, -3, 7, 2, 18, -9, 25, -4, 11, 11, 10, 30, 3, 30, 0, 12, -10, 12, -22, 11, -25, 23)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1624951520]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1488636969]
 position = Vector2(8, -0.5)
 shape = SubResource("RectangleShape2D_fqqmo")
 
