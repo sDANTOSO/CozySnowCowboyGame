@@ -22,8 +22,10 @@ polygon = PackedVector2Array(-4, 90, 85, 90, 88, 81, 83, 71, 85, 55, 79, 51, 79,
 [node name="TreeBranch" type="RigidBody2D" parent="." unique_id=805030832]
 collision_layer = 96
 collision_mask = 33
-mass = 1.061
+mass = 5.0
 gravity_scale = 0.0
+center_of_mass_mode = 1
+center_of_mass = Vector2(81, 22)
 script = ExtResource("2_gvmkm")
 
 [node name="Sprite2D" type="Sprite2D" parent="TreeBranch" unique_id=1603698531]
@@ -40,7 +42,10 @@ polygon = PackedVector2Array(-10, 29, -5, 26, 5, 23, 19, 26, 22, 25, 28, 23, 32,
 [node name="Area2D" type="Area2D" parent="TreeBranch" unique_id=411534244]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TreeBranch/Area2D" unique_id=45320313]
-polygon = PackedVector2Array(91, 37, 104, 39, 122, 43, 136, 34, 136, 22, 126, 25, 123, 16, 107, 13, 93, 12, 85, 30)
+polygon = PackedVector2Array(91, 37, 104, 39, 122, 43, 136, 34, 136, 22, 126, 25, 123, 16, 107, 13, 91, 15, 85, 30)
+
+[node name="Marker2D" type="Marker2D" parent="TreeBranch" unique_id=861617054]
+position = Vector2(81, 19)
 
 [connection signal="body_entered" from="TreeBranch" to="TreeBranch" method="_on_body_entered"]
 [connection signal="body_entered" from="TreeBranch/Area2D" to="TreeBranch" method="_on_area_2d_body_entered"]
