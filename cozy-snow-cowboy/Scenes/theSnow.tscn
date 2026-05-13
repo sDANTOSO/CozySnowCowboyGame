@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ba46857hx57bh"]
+[gd_scene load_steps=9 format=3 uid="uid://ba46857hx57bh"]
 
 [ext_resource type="PackedScene" uid="uid://bua6thnyrktmw" path="res://Scenes/the_main.tscn" id="1_pv3w6"]
 [ext_resource type="PackedScene" uid="uid://dgj5najb6c1qp" path="res://Scenes/the_snow.tscn" id="2_3v7dj"]
@@ -9,47 +9,48 @@
 [ext_resource type="Script" uid="uid://e22n66nryo5q" path="res://Scenes/unstable.gd" id="6_g2qjc"]
 [ext_resource type="Texture2D" uid="uid://cowoyl6q0227k" path="res://Assets/Cliff.png" id="6_rceaq"]
 
-[node name="theMain" unique_id=1701515543 instance=ExtResource("1_pv3w6")]
+[node name="theMain" instance=ExtResource("1_pv3w6")]
 
-[node name="The snow" parent="." index="0" unique_id=93469208 instance=ExtResource("2_3v7dj")]
+[node name="The snow" parent="." index="0" instance=ExtResource("2_3v7dj")]
 position = Vector2(68, 10)
 
-[node name="Fourmyle" parent="." index="3" unique_id=1466414570 instance=ExtResource("3_3v7dj")]
-position = Vector2(-63, 15)
+[node name="Fourmyle" parent="." index="3" instance=ExtResource("3_3v7dj")]
+position = Vector2(-232, 34)
+collision_mask = 575
 
-[node name="Tree" parent="." index="4" unique_id=76103027 instance=ExtResource("4_1jrh8")]
+[node name="Tree" parent="." index="4" instance=ExtResource("4_1jrh8")]
 position = Vector2(330, -77)
 
-[node name="Blobfish" parent="." index="5" unique_id=742803979 instance=ExtResource("5_s8ngn")]
+[node name="Blobfish" parent="." index="5" instance=ExtResource("5_s8ngn")]
 position = Vector2(-381, -77)
 
-[node name="Capybara" parent="." index="6" unique_id=132380422 instance=ExtResource("5_rceaq")]
+[node name="Capybara" parent="." index="6" instance=ExtResource("5_rceaq")]
 position = Vector2(400, -85)
 
-[node name="Unstable" type="RigidBody2D" parent="." index="7" unique_id=470466095]
+[node name="Unstable" type="RigidBody2D" parent="." index="7"]
 position = Vector2(314, 50)
 collision_layer = 96
-collision_mask = 33
+collision_mask = 545
 mass = 5.018
 gravity_scale = 0.0
 center_of_mass_mode = 1
 center_of_mass = Vector2(-696, -112)
 script = ExtResource("6_g2qjc")
 
-[node name="Cliff" type="Sprite2D" parent="Unstable" index="0" unique_id=565503327]
+[node name="Cliff" type="Sprite2D" parent="Unstable" index="0"]
 position = Vector2(-694, -111)
 texture = ExtResource("6_rceaq")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable" index="1" unique_id=1831643763]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable" index="1"]
 position = Vector2(-694, -111)
 polygon = PackedVector2Array(-10, -5, 2, -6, 6, -1, 2, 4, -1, 1, -8, 7)
 
-[node name="Area2D" type="Area2D" parent="Unstable" index="2" unique_id=384590971]
+[node name="Area2D" type="Area2D" parent="Unstable" index="2"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable/Area2D" index="0" unique_id=1959633403]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable/Area2D" index="0"]
 polygon = PackedVector2Array(-715, -104, -706, -104, -708, -116)
 
-[node name="Marker2D" type="Marker2D" parent="Unstable" index="3" unique_id=784098681]
+[node name="Marker2D" type="Marker2D" parent="Unstable" index="3"]
 position = Vector2(-695, -112)
 
 [connection signal="player_dont_flip_h" from="Fourmyle" to="Maincharacter" method="_on_fourmyle_player_dont_flip_h"]

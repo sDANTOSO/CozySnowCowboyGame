@@ -9,7 +9,7 @@ signal player_flip_h()
 signal player_dont_flip_h()
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -200.0
 
 var direction1:Vector2=Vector2.ZERO
 var inUse = false
@@ -47,7 +47,7 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.play("Walking")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		
+		animated_sprite_2d.play("default")
 	#while velocity.x > 0:
 		
 

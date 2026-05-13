@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cis5ryt48ehg0"]
+[gd_scene load_steps=5 format=3 uid="uid://cis5ryt48ehg0"]
 
 [ext_resource type="Texture2D" uid="uid://bqwwl5l7bic4g" path="res://Assets/Blobfishv3.png" id="1_vtv78"]
 [ext_resource type="Texture2D" uid="uid://dvpf1yd6ehojq" path="res://Assets/CryoTopHalf.png" id="2_rpsdc"]
@@ -8,28 +8,28 @@
 radius = 2.0
 height = 8.0
 
-[node name="Blobfish" type="Node2D" unique_id=742803979]
+[node name="Blobfish" type="Node2D"]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=476726910]
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
 collision_layer = 4
-collision_mask = 63
+collision_mask = 575
 
-[node name="CryoTopHalf" type="Sprite2D" parent="RigidBody2D" unique_id=1243677853]
+[node name="CryoTopHalf" type="Sprite2D" parent="RigidBody2D"]
 position = Vector2(-5, 0)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_rpsdc")
 
-[node name="CryoBottomHalf" type="Sprite2D" parent="RigidBody2D" unique_id=1764361834]
+[node name="CryoBottomHalf" type="Sprite2D" parent="RigidBody2D"]
 position = Vector2(-5, 0)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_ya6ol")
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1729144789]
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
 position = Vector2(-5.25, 3.8125)
 scale = Vector2(0.20161289, 0.19921875)
 texture = ExtResource("1_vtv78")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1845238444]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(-5, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_vcoxp")
