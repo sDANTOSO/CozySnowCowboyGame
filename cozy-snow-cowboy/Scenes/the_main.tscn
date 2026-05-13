@@ -1,20 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://bua6thnyrktmw"]
+[gd_scene format=3 uid="uid://bua6thnyrktmw"]
 
 [ext_resource type="PackedScene" uid="uid://5fj8vw51ttiq" path="res://Scenes/maincharacter.tscn" id="1_1vb85"]
 [ext_resource type="Script" uid="uid://dktut6xugwcjb" path="res://Scenes/the_main.gd" id="1_mukro"]
-[ext_resource type="Script" uid="uid://bk8qff0hyu040" path="res://Scenes/area_2d.gd" id="3_gyvgq"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_nkkfy"]
-radius = 45.39824
-
-[node name="theMain" type="Node2D"]
+[node name="theMain" type="Node2D" unique_id=1882367490]
 script = ExtResource("1_mukro")
 
-[node name="Projectiles" type="Node2D" parent="."]
+[node name="Projectiles" type="Node2D" parent="." unique_id=915955275]
 
-[node name="Maincharacter" parent="." instance=ExtResource("1_1vb85")]
+[node name="Maincharacter" parent="." unique_id=2134009318 instance=ExtResource("1_1vb85")]
 
-[node name="Camera2D" type="Camera2D" parent="Maincharacter"]
+[node name="Camera2D" type="Camera2D" parent="Maincharacter" unique_id=1559859342]
 position = Vector2(-2, 19)
 offset = Vector2(0, -100)
 zoom = Vector2(2, 2)
@@ -22,14 +18,5 @@ limit_left = -500
 limit_top = -9999980
 limit_right = 590
 limit_bottom = 10000020
-
-[node name="Area2D" type="StaticBody2D" parent="."]
-position = Vector2(103, -25)
-collision_layer = 16
-script = ExtResource("3_gyvgq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(43, 36)
-shape = SubResource("CircleShape2D_nkkfy")
 
 [connection signal="laser_shot" from="Maincharacter" to="." method="_on_maincharacter_laser_shot"]

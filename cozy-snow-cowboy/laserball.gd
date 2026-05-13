@@ -16,6 +16,10 @@ func _on_body_entered(body: Node2D) -> void:
 	#if body.is_in_group("branch"):
 		#hit_breakable.emit()
 	#else: 
+	
+	if body.is_in_group("branch"):
+		body.hit()
+		
 	if "hit" in body:
 		body.hit()
 		queue_free()
@@ -29,9 +33,10 @@ func _on_laserdie_timeout() -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	#print(body);
+	#if "hit" in body:
+		#body.hit()
+		#print("hitS")
+	queue_free()
 	
-	if "hit" in body:
-		body.hit()
-		print("hitS")
-		queue_free()
 	 # Replace with function body.

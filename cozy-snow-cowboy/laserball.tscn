@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpud21bajx38h"]
+[gd_scene format=3 uid="uid://bpud21bajx38h"]
 
 [ext_resource type="Texture2D" uid="uid://b2sxlcscbu3bw" path="res://Assets/LaserBall.png" id="1_0j5a5"]
 [ext_resource type="Script" uid="uid://d3p0n3ugis74b" path="res://laserball.gd" id="1_5q70u"]
@@ -7,27 +7,27 @@
 radius = 4.0
 height = 8.0
 
-[node name="Laserball" type="Area2D"]
+[node name="Laserball" type="Area2D" unique_id=308010211]
 rotation = -1.5707964
 collision_layer = 8
 collision_mask = 127
 script = ExtResource("1_5q70u")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=52989797]
 texture = ExtResource("1_0j5a5")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1304311299]
 position = Vector2(-1, 0)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_5q70u")
 
-[node name="Laserdie" type="Timer" parent="."]
+[node name="Laserdie" type="Timer" parent="." unique_id=1030904390]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=286307084]
 collision_layer = 8
 collision_mask = 127
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1710785369]
 position = Vector2(-1, 0)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_5q70u")
@@ -35,3 +35,4 @@ shape = SubResource("CapsuleShape2D_5q70u")
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Laserdie" to="." method="_on_laserdie_timeout"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

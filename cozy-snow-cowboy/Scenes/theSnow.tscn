@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ba46857hx57bh"]
+[gd_scene format=3 uid="uid://ba46857hx57bh"]
 
 [ext_resource type="PackedScene" uid="uid://bua6thnyrktmw" path="res://Scenes/the_main.tscn" id="1_pv3w6"]
 [ext_resource type="PackedScene" uid="uid://dgj5najb6c1qp" path="res://Scenes/the_snow.tscn" id="2_3v7dj"]
@@ -6,18 +6,18 @@
 [ext_resource type="PackedScene" uid="uid://cfckt23m1v4da" path="res://tree.tscn" id="4_1jrh8"]
 [ext_resource type="PackedScene" uid="uid://ckrc2y7xwawng" path="res://capybara.tscn" id="5_rceaq"]
 
-[node name="theMain" instance=ExtResource("1_pv3w6")]
+[node name="theMain" unique_id=973815575 instance=ExtResource("1_pv3w6")]
 
-[node name="The snow" parent="." index="0" instance=ExtResource("2_3v7dj")]
+[node name="The snow" parent="." index="0" unique_id=569352509 instance=ExtResource("2_3v7dj")]
 position = Vector2(68, 10)
 
-[node name="Fourmyle" parent="." index="3" instance=ExtResource("3_3v7dj")]
+[node name="Fourmyle" parent="." index="3" unique_id=126514054 instance=ExtResource("3_3v7dj")]
 position = Vector2(-63, 15)
 
-[node name="Tree" parent="." index="4" instance=ExtResource("4_1jrh8")]
+[node name="Tree" parent="." index="4" unique_id=1284145176 instance=ExtResource("4_1jrh8")]
 position = Vector2(330, -77)
 
-[node name="Capybara" parent="." index="5" instance=ExtResource("5_rceaq")]
+[node name="Capybara" parent="." index="5" unique_id=1937279472 instance=ExtResource("5_rceaq")]
 position = Vector2(401, -85)
 
 [connection signal="player_dont_flip_h" from="Fourmyle" to="Maincharacter" method="_on_fourmyle_player_dont_flip_h"]
