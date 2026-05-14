@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://vkpulhv270xm"]
+
+[ext_resource type="Texture2D" uid="uid://bwu4c4sg7668k" path="res://Assets/MenuBG.png" id="1_hdmo1"]
+[ext_resource type="Script" uid="uid://d1u6l3il4abpq" path="res://pause_menu.gd" id="1_nwcfo"]
+
+[sub_resource type="Gradient" id="Gradient_hdmo1"]
+offsets = PackedFloat32Array(0, 0.39999998, 0.9)
+colors = PackedColorArray(0.96035105, 0.96035105, 0.96035093, 1, 0.26451182, 0.52869767, 0.52859175, 1, 5.7756904e-07, 0.41383278, 0.41387358, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nwcfo"]
+gradient = SubResource("Gradient_hdmo1")
+width = 118
+
+[sub_resource type="SystemFont" id="SystemFont_hdmo1"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_nwcfo"]
+font = SubResource("SystemFont_hdmo1")
+font_size = 13
+font_color = Color(0.014275214, 0.014275223, 0.014275194, 1)
+
+[node name="PauseMenu" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nwcfo")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_hdmo1")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 162.0
+offset_right = 269.0
+offset_bottom = 193.0
+text = "Continue"
+icon = SubResource("GradientTexture1D_nwcfo")
+
+[node name="Continue" type="Label" parent="."]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 67.0
+offset_right = 163.0
+offset_bottom = 90.0
+text = "Move "
+label_settings = SubResource("LabelSettings_nwcfo")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

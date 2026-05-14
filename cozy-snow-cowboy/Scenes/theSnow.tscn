@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://bua6thnyrktmw" path="res://Scenes/the_main.tscn" id="1_pv3w6"]
 [ext_resource type="PackedScene" uid="uid://dgj5najb6c1qp" path="res://Scenes/the_snow.tscn" id="2_3v7dj"]
-[ext_resource type="PackedScene" uid="uid://cqlvwanlj647b" path="res://fourmyle.tscn" id="3_3v7dj"]
-[ext_resource type="PackedScene" uid="uid://cfckt23m1v4da" path="res://tree.tscn" id="4_1jrh8"]
-[ext_resource type="PackedScene" uid="uid://ckrc2y7xwawng" path="res://capybara.tscn" id="5_rceaq"]
-[ext_resource type="PackedScene" uid="uid://cis5ryt48ehg0" path="res://blobfish.tscn" id="5_s8ngn"]
+[ext_resource type="PackedScene" uid="uid://cqlvwanlj647b" path="res://Scenes/fourmyle.tscn" id="3_3v7dj"]
+[ext_resource type="PackedScene" uid="uid://cfckt23m1v4da" path="res://Scenes/tree.tscn" id="4_1jrh8"]
+[ext_resource type="PackedScene" uid="uid://ckrc2y7xwawng" path="res://Scenes/capybara.tscn" id="5_rceaq"]
+[ext_resource type="PackedScene" uid="uid://cis5ryt48ehg0" path="res://Scenes/blobfish.tscn" id="5_s8ngn"]
 [ext_resource type="Script" uid="uid://e22n66nryo5q" path="res://Scenes/unstable.gd" id="6_g2qjc"]
 [ext_resource type="Texture2D" uid="uid://cowoyl6q0227k" path="res://Assets/Cliff.png" id="6_rceaq"]
 
