@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c5vbxx7og15na"]
+
+[ext_resource type="Texture2D" uid="uid://bitcqu6mxt8p4" path="res://Assets/Crapler.png" id="1_4w32r"]
+[ext_resource type="Script" uid="uid://blx606kekoc5l" path="res://crapler.gd" id="1_jfx1f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jfx1f"]
+radius = 8.0
+height = 28.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jfx1f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4w32r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Crapler" type="Node2D" unique_id=2112921429]
+script = ExtResource("1_jfx1f")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=2099109790]
+collision_layer = 2
+collision_mask = 1023
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=272748148]
+position = Vector2(0, 10)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_jfx1f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D" unique_id=782981831]
+sprite_frames = SubResource("SpriteFrames_jfx1f")

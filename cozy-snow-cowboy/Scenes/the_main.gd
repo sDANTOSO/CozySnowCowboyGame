@@ -17,11 +17,11 @@ func _process(delta: float) -> void:
 
 func pause():
 	get_tree().paused = true
-	$PauseMenu.show()
+	$Maincharacter/PauseMenu.show()
 	
 	
 func unpause():
-	$PauseMenu.hide()
+	$Maincharacter/PauseMenu.hide()
 	get_tree().paused=false
 	
 

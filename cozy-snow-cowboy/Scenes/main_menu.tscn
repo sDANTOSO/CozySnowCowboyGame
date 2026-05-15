@@ -1,22 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjm7ois8qg6m4"]
+[gd_scene format=3 uid="uid://bjm7ois8qg6m4"]
 
 [ext_resource type="Script" uid="uid://jbnrh7rgbvy1" path="res://main_menu.gd" id="1_28flt"]
 
-[node name="Main menu" type="Node2D"]
+[node name="Main menu" type="Node2D" unique_id=1021475103]
 script = ExtResource("1_28flt")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=790463648]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureButton" type="TextureButton" parent="Control"]
+[node name="TextureButton" type="TextureButton" parent="Control" unique_id=918115600]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="Control"]
+[node name="Button" type="Button" parent="Control" unique_id=133019372]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 193.0
+offset_right = 457.0
+offset_bottom = 355.0
+text = "Start"
+
+[node name="Quit" type="Button" parent="Control" unique_id=1851838181]
 layout_mode = 0
 offset_left = 194.0
 offset_top = 193.0
@@ -25,3 +33,4 @@ offset_bottom = 355.0
 text = "Start"
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Quit" to="." method="_on_button_pressed"]

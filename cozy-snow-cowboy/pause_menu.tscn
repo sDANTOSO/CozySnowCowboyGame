@@ -1,16 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://vkpulhv270xm"]
+[gd_scene format=3 uid="uid://vkpulhv270xm"]
 
 [ext_resource type="Texture2D" uid="uid://bwu4c4sg7668k" path="res://Assets/MenuBG.png" id="1_hdmo1"]
 [ext_resource type="Script" uid="uid://d1u6l3il4abpq" path="res://pause_menu.gd" id="1_nwcfo"]
 
-[sub_resource type="Gradient" id="Gradient_hdmo1"]
-offsets = PackedFloat32Array(0, 0.39999998, 0.9)
-colors = PackedColorArray(0.96035105, 0.96035105, 0.96035093, 1, 0.26451182, 0.52869767, 0.52859175, 1, 5.7756904e-07, 0.41383278, 0.41387358, 1)
-metadata/_snap_enabled = true
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_nwcfo"]
-gradient = SubResource("Gradient_hdmo1")
-width = 118
+[sub_resource type="ImageTexture" id="ImageTexture_nwcfo"]
 
 [sub_resource type="SystemFont" id="SystemFont_hdmo1"]
 subpixel_positioning = 0
@@ -18,36 +11,91 @@ subpixel_positioning = 0
 [sub_resource type="LabelSettings" id="LabelSettings_nwcfo"]
 font = SubResource("SystemFont_hdmo1")
 font_size = 13
-font_color = Color(0.014275214, 0.014275223, 0.014275194, 1)
+font_color = Color(0.4974739, 0.4974736, 0.49747366, 1)
 
-[node name="PauseMenu" type="Control"]
+[node name="PauseMenu" type="Control" unique_id=1964105682]
 process_mode = 2
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_nwcfo")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1854165032]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_hdmo1")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1946427703]
 layout_mode = 0
-offset_left = 68.0
-offset_top = 162.0
-offset_right = 269.0
-offset_bottom = 193.0
+offset_left = 62.0
+offset_top = 169.0
+offset_right = 145.0
+offset_bottom = 200.0
 text = "Continue"
-icon = SubResource("GradientTexture1D_nwcfo")
+icon = SubResource("ImageTexture_nwcfo")
 
-[node name="Continue" type="Label" parent="."]
+[node name="Button2" type="Button" parent="." unique_id=273935430]
 layout_mode = 0
-offset_left = 92.0
-offset_top = 67.0
-offset_right = 163.0
-offset_bottom = 90.0
-text = "Move "
+offset_left = 170.0
+offset_top = 170.0
+offset_right = 253.0
+offset_bottom = 201.0
+text = "Quit"
+icon = SubResource("ImageTexture_nwcfo")
+
+[node name="Continue" type="Label" parent="." unique_id=1519777448]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 108.0
+offset_right = 155.0
+offset_bottom = 131.0
+text = "Esc to open control menu"
+label_settings = SubResource("LabelSettings_nwcfo")
+
+[node name="Continue5" type="Label" parent="." unique_id=54775931]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 128.0
+offset_right = 240.0
+offset_bottom = 151.0
+text = "To ride Fourmyle jump on it"
+label_settings = SubResource("LabelSettings_nwcfo")
+
+[node name="Continue6" type="Label" parent="." unique_id=1106048953]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 143.0
+offset_right = 297.0
+offset_bottom = 166.0
+text = "You can break branches and cliff ledges"
+label_settings = SubResource("LabelSettings_nwcfo")
+
+[node name="Continue2" type="Label" parent="." unique_id=830789157]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 44.0
+offset_right = 155.0
+offset_bottom = 67.0
+text = "Move = D & S"
+label_settings = SubResource("LabelSettings_nwcfo")
+
+[node name="Continue3" type="Label" parent="." unique_id=1681726618]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 65.0
+offset_right = 142.0
+offset_bottom = 88.0
+text = "Jump = Space"
+label_settings = SubResource("LabelSettings_nwcfo")
+
+[node name="Continue4" type="Label" parent="." unique_id=1801732507]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 92.0
+offset_right = 141.0
+offset_bottom = 115.0
+text = "Dismount = E"
 label_settings = SubResource("LabelSettings_nwcfo")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
