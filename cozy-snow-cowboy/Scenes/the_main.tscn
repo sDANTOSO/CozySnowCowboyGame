@@ -1,17 +1,17 @@
-[gd_scene format=3 uid="uid://bua6thnyrktmw"]
+[gd_scene load_steps=4 format=3 uid="uid://bua6thnyrktmw"]
 
 [ext_resource type="PackedScene" uid="uid://5fj8vw51ttiq" path="res://Scenes/maincharacter.tscn" id="1_1vb85"]
 [ext_resource type="Script" uid="uid://dktut6xugwcjb" path="res://Scenes/the_main.gd" id="1_mukro"]
 [ext_resource type="PackedScene" uid="uid://vkpulhv270xm" path="res://pause_menu.tscn" id="3_gyvgq"]
 
-[node name="theMain" type="Node2D" unique_id=1402040001]
+[node name="theMain" type="Node2D"]
 script = ExtResource("1_mukro")
 
-[node name="Projectiles" type="Node2D" parent="." unique_id=1408397573]
+[node name="Projectiles" type="Node2D" parent="."]
 
-[node name="Maincharacter" parent="." unique_id=1180118847 instance=ExtResource("1_1vb85")]
+[node name="Maincharacter" parent="." instance=ExtResource("1_1vb85")]
 
-[node name="Camera2D" type="Camera2D" parent="Maincharacter" unique_id=1300469951]
+[node name="Camera2D" type="Camera2D" parent="Maincharacter"]
 position = Vector2(-2, 19)
 offset = Vector2(0, -100)
 zoom = Vector2(2, 2)
@@ -20,11 +20,14 @@ limit_top = -9999980
 limit_right = 590
 limit_bottom = 10000020
 
-[node name="PauseMenu" parent="Maincharacter" unique_id=445299330 instance=ExtResource("3_gyvgq")]
+[node name="PauseMenu" parent="Maincharacter" instance=ExtResource("3_gyvgq")]
 visible = false
 offset_left = -162.0
 offset_top = -185.0
 offset_right = -162.0
 offset_bottom = -185.0
+
+[node name="Ground2" type="Marker2D" parent="Maincharacter"]
+position = Vector2(-2, -50)
 
 [connection signal="laser_shot" from="Maincharacter" to="." method="_on_maincharacter_laser_shot"]

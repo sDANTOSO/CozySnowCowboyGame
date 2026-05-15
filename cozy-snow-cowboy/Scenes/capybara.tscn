@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://ckrc2y7xwawng"]
+[gd_scene load_steps=18 format=3 uid="uid://ckrc2y7xwawng"]
 
 [ext_resource type="Script" uid="uid://ro0hvnrcnv0c" path="res://capybara.gd" id="1_2o0kj"]
 [ext_resource type="Texture2D" uid="uid://p6e833qd1vwv" path="res://Assets/capybara1.png" id="1_ml7vp"]
 [ext_resource type="Texture2D" uid="uid://c4syurpysgg4x" path="res://Assets/capybara animation-sheet.png" id="2_4w3eh"]
+[ext_resource type="Script" uid="uid://bb3jlqtnobnn4" path="res://Scenes/rigid_body_2d.gd" id="2_5uon1"]
 [ext_resource type="Texture2D" uid="uid://dvpf1yd6ehojq" path="res://Assets/CryoTopHalf.png" id="2_ji052"]
 [ext_resource type="Texture2D" uid="uid://kgbia04cxwam" path="res://Assets/CryoBottomHalf.png" id="3_2o0kj"]
 
@@ -88,31 +89,33 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ji052"]
 size = Vector2(9, 20)
 
-[node name="Capybara" type="Node2D" unique_id=138263490]
+[node name="Capybara" type="Node2D"]
 script = ExtResource("1_2o0kj")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1861541101]
+[node name="RigidBody2D" type="CharacterBody2D" parent="."]
 collision_layer = 4
-collision_mask = 575
+collision_mask = 1023
+script = ExtResource("2_5uon1")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D" unique_id=1521832146]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D"]
 position = Vector2(-14.5, 8)
 scale = Vector2(0.546875, 0.5)
 sprite_frames = SubResource("SpriteFrames_5h5f7")
 animation = &"Walking"
 frame_progress = 0.7118177
 
-[node name="CryoTopHalf" type="Sprite2D" parent="RigidBody2D" unique_id=390640867]
-position = Vector2(-17, 0)
+[node name="CryoTopHalf" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(-33, 8)
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("2_ji052")
+offset = Vector2(16.000002, -8.000001)
 
-[node name="CryoBottomHalf" type="Sprite2D" parent="RigidBody2D" unique_id=501679919]
+[node name="CryoBottomHalf" type="Sprite2D" parent="RigidBody2D"]
 position = Vector2(-17, 0)
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("3_2o0kj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1965424121]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(-18, 9.5)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_ji052")
