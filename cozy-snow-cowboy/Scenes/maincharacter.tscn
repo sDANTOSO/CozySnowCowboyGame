@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://5fj8vw51ttiq"]
+[gd_scene load_steps=9 format=3 uid="uid://5fj8vw51ttiq"]
 
 [ext_resource type="Script" uid="uid://ct5r4iipjjje2" path="res://Scripts/Lingeringcharacter.gd" id="1_flaqb"]
 [ext_resource type="Texture2D" uid="uid://dss0jptvl41f5" path="res://Assets/lucia-barrero-habilidx-sam-removebg-preview.png" id="2_3ommq"]
 [ext_resource type="Texture2D" uid="uid://dsd6hm7cik32o" path="res://Assets/gun1.png" id="3_3ommq"]
 [ext_resource type="Texture2D" uid="uid://bprauyvadekaa" path="res://Assets/lucia-barrero-habilidCowboyWithGun.png" id="3_sdasw"]
+[ext_resource type="Texture2D" uid="uid://cxewik11gdkv3" path="res://Assets/ToastyCowboy.png" id="4_b68jv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b68jv"]
 animations = [{
@@ -13,6 +14,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"Shoot",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_b68jv")
+}],
+"loop": true,
+"name": &"Toasting",
 "speed": 5.0
 }, {
 "frames": [{
@@ -39,6 +48,7 @@ script = ExtResource("1_flaqb")
 position = Vector2(-10.000001, 1)
 scale = Vector2(0.088, 0.088)
 sprite_frames = SubResource("SpriteFrames_b68jv")
+animation = &"Toasting"
 offset = Vector2(124.99989, -34.090904)
 flip_h = true
 
@@ -67,9 +77,12 @@ position = Vector2(13, 0)
 position = Vector2(-11, 0)
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1, 4)
 shape = SubResource("RectangleShape2D_sdasw")
 
 [connection signal="timeout" from="Lasercooldown" to="." method="_on_lasercooldown_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

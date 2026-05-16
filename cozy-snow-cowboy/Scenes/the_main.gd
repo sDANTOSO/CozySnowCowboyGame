@@ -50,3 +50,4 @@ func create_marsh(pos):
 	marsh.position = pos
 	var marsh1 = marsh
 	$Marshmallows.add_child(marsh)
+	marsh.add_to_group("Marsh")

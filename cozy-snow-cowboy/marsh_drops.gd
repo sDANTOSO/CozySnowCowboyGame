@@ -1,5 +1,7 @@
 extends RigidBody2D
 
 func _ready() -> void:
-	
 	add_to_group("Marsh")
+
+func kill() -> void:
+	queue_free()
