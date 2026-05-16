@@ -14,9 +14,11 @@ const JUMP_VELOCITY = -300.0
 var direction1:Vector2=Vector2.ZERO
 var can_laser: bool = true #changes if laser has cooled down
 var inUse = true #if this characters in use for movement
+var weaponout=false
 
 func _ready() -> void:
 	add_to_group("player")
+	sprite.play("default")
 	#print(sprite.h)
 
 func _physics_process(delta: float) -> void:
@@ -48,14 +50,18 @@ func _physics_process(delta: float) -> void:
 	
 func _process(_delta: float) -> void:
 	
-	if Input.is_action_just_pressed("Grab"):
-		sprite.play("Shoot")
-		#print("yay")
+	if Input.is_action_just_pressed("drawweapon") && weaponout == false:
+		sprite.play("Shoot") 
+		weaponout=true
+	else: if Input.is_action_just_pressed("drawweapon") && weaponout == true:
+		sprite.play("default")
+		weaponout=false
 	#else: 
 		#sprite.stop()
 		#radiuscheck
 		
-	if Input.is_action_just_pressed("Shoot"):
+		
+	if Input.is_action_just_pressed("Shoot") && weaponout==true && can_laser== true:
 		$Lasercooldown.start()
 		var start_point = currentmarker
 		var player_direction=(get_global_mouse_position()-position).normalized()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ckrc2y7xwawng"]
+[gd_scene load_steps=16 format=3 uid="uid://ckrc2y7xwawng"]
 
 [ext_resource type="Script" uid="uid://ro0hvnrcnv0c" path="res://capybara.gd" id="1_2o0kj"]
 [ext_resource type="Texture2D" uid="uid://p6e833qd1vwv" path="res://Assets/capybara1.png" id="1_ml7vp"]
@@ -6,14 +6,6 @@
 [ext_resource type="Script" uid="uid://bb3jlqtnobnn4" path="res://Scenes/rigid_body_2d.gd" id="2_5uon1"]
 [ext_resource type="Texture2D" uid="uid://dvpf1yd6ehojq" path="res://Assets/CryoTopHalf.png" id="2_ji052"]
 [ext_resource type="Texture2D" uid="uid://kgbia04cxwam" path="res://Assets/CryoBottomHalf.png" id="3_2o0kj"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2gl14"]
-atlas = ExtResource("2_4w3eh")
-region = Rect2(0, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mdcek"]
-atlas = ExtResource("2_4w3eh")
-region = Rect2(64, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uitw0"]
 atlas = ExtResource("2_4w3eh")
@@ -47,12 +39,6 @@ region = Rect2(512, 0, 64, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2gl14")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mdcek")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_uitw0")
 }, {
 "duration": 1.0,
@@ -75,7 +61,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walking",
-"speed": 6.0
+"speed": 25.0
 }, {
 "frames": [{
 "duration": 1.0,

@@ -9,7 +9,7 @@ func _ready() -> void:
 func hit () -> void:
 	health += 1
 	animate()
-	print("craplerhit")
+	
 
 func animate():
 	crapler.play("damage")

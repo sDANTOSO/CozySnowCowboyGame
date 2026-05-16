@@ -12,7 +12,7 @@ func hit () -> void:
 	print("craplerhit")
 
 func animate():
-	crapler.play("damage")
+	#crapler.play("damage")
 	crapler.frame = health
 
 

@@ -9,7 +9,7 @@ extends CharacterBody2D
 
 @onready var target_path= get_parent().get_parent().get_node("Maincharacter/Ground2")
 @export var follow_distance:float = 100.0
-@export var follow_speed:float = 75.0
+@export var follow_speed:float = 45.0
 var target:Node2D
 var followon =false
 
@@ -40,7 +40,9 @@ func _physics_process(delta: float) -> void:
 	
 		if to_target.length() > follow_distance:
 			global_position += direction* follow_speed * delta 
-		
+			capybara.play("Walking")
+		else:
+			capybara.play("default")
 		move_and_slide()
 	
 	

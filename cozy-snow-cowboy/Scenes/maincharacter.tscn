@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://5fj8vw51ttiq"]
+[gd_scene load_steps=8 format=3 uid="uid://5fj8vw51ttiq"]
 
 [ext_resource type="Script" uid="uid://ct5r4iipjjje2" path="res://Scripts/Lingeringcharacter.gd" id="1_flaqb"]
 [ext_resource type="Texture2D" uid="uid://dss0jptvl41f5" path="res://Assets/lucia-barrero-habilidx-sam-removebg-preview.png" id="2_3ommq"]
@@ -28,6 +28,8 @@ animations = [{
 radius = 4.0
 height = 24.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sdasw"]
+
 [node name="Maincharacter" type="CharacterBody2D"]
 position = Vector2(14, 0)
 collision_mask = 575
@@ -37,7 +39,6 @@ script = ExtResource("1_flaqb")
 position = Vector2(-10.000001, 1)
 scale = Vector2(0.088, 0.088)
 sprite_frames = SubResource("SpriteFrames_b68jv")
-animation = &"Shoot"
 offset = Vector2(124.99989, -34.090904)
 flip_h = true
 
@@ -64,5 +65,11 @@ position = Vector2(13, 0)
 
 [node name="Marker2D2" type="Marker2D" parent="."]
 position = Vector2(-11, 0)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 4)
+shape = SubResource("RectangleShape2D_sdasw")
 
 [connection signal="timeout" from="Lasercooldown" to="." method="_on_lasercooldown_timeout"]
