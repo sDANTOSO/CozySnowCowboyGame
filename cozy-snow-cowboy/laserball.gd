@@ -2,7 +2,7 @@ extends Area2D
 
 signal hit_breakable
 @export var speed:int =300
-var direction: Vector2= Vector2.UP
+var direction: Vector2= Vector2.DOWN
 
 func _ready() -> void:
 	$Laserdie.start()
@@ -20,7 +20,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("branch"):
 		body.hit()
 	if body.is_in_group("enemy"):
-		body.hit
+		body.hit()
 		
 	if "hit" in body:
 		body.hit()

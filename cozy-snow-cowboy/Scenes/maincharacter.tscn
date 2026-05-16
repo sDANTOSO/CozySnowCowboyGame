@@ -29,15 +29,17 @@ radius = 4.0
 height = 24.0
 
 [node name="Maincharacter" type="CharacterBody2D"]
-position = Vector2(2, 0)
+position = Vector2(14, 0)
 collision_mask = 575
 script = ExtResource("1_flaqb")
 
 [node name="CharacterSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(9.000001, -2)
+position = Vector2(-10.000001, 1)
 scale = Vector2(0.088, 0.088)
 sprite_frames = SubResource("SpriteFrames_b68jv")
 animation = &"Shoot"
+offset = Vector2(124.99989, -34.090904)
+flip_h = true
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 0)
@@ -58,6 +60,9 @@ position = Vector2(-2, 36)
 texture = ExtResource("3_3ommq")
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(17, 0)
+position = Vector2(13, 0)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(-11, 0)
 
 [connection signal="timeout" from="Lasercooldown" to="." method="_on_lasercooldown_timeout"]

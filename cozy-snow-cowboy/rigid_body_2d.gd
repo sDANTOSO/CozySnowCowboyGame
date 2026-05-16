@@ -1,5 +1,5 @@
-extends Node2D
-@onready var crapler: AnimatedSprite2D =$RigidBody2D/AnimatedSprite2D
+extends RigidBody2D
+@onready var crapler: AnimatedSprite2D =$AnimatedSprite2D
 var health = 0
 
 # Called when the node enters the scene tree for the first time.

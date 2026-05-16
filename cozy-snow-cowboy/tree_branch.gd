@@ -32,5 +32,5 @@ func _on_body_entered(body: Node) -> void:
 		
 		hey=true
 		branch.gravity_scale=1.0
-		print("yay")
+		print("thisishowbranch")
 	

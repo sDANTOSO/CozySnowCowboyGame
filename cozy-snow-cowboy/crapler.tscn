@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://c5vbxx7og15na"]
+[gd_scene load_steps=7 format=3 uid="uid://c5vbxx7og15na"]
 
 [ext_resource type="Texture2D" uid="uid://bitcqu6mxt8p4" path="res://Assets/Crapler.png" id="1_4w32r"]
 [ext_resource type="Script" uid="uid://blx606kekoc5l" path="res://crapler.gd" id="1_jfx1f"]
+[ext_resource type="Script" uid="uid://cvoytdlljbu1k" path="res://rigid_body_2d.gd" id="2_umyak"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jfx1f"]
 radius = 8.0
@@ -18,17 +19,30 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Crapler" type="Node2D" unique_id=2112921429]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_umyak"]
+radius = 8.0
+
+[node name="Crapler" type="Node2D"]
 script = ExtResource("1_jfx1f")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=2099109790]
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
 collision_layer = 2
 collision_mask = 1023
+script = ExtResource("2_umyak")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=272748148]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(0, 10)
 rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_jfx1f")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D" unique_id=782981831]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D"]
 sprite_frames = SubResource("SpriteFrames_jfx1f")
+
+[node name="Area2D" type="Area2D" parent="RigidBody2D"]
+collision_layer = 2
+collision_mask = 1023
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D"]
+position = Vector2(0, 10)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_umyak")

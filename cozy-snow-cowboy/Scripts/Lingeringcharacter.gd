@@ -2,7 +2,9 @@ extends CharacterBody2D
 
 @onready var sprite : AnimatedSprite2D= $CharacterSprite
 @onready var collision_shape_2d: CollisionShape2D =$PlayerCollision
-
+@onready var marker1: Marker2D =$Marker2D
+@onready var marker2: Marker2D =$Marker2D2
+@onready var  currentmarker: Marker2D=$Marker2D
 
 signal laser_shot(pos,direction)#says where the laser is being shot so that the scene can create the laser 
 
@@ -55,7 +57,7 @@ func _process(_delta: float) -> void:
 		
 	if Input.is_action_just_pressed("Shoot"):
 		$Lasercooldown.start()
-		var start_point = $Marker2D
+		var start_point = currentmarker
 		var player_direction=(get_global_mouse_position()-position).normalized()
 		laser_shot.emit(start_point.global_position,player_direction)
 		can_laser=false
@@ -63,8 +65,10 @@ func _process(_delta: float) -> void:
 func update_facing_direction()  :
 	if direction1.x > 0 :
 		sprite.flip_h=false
+		currentmarker=marker1
 	elif direction1.x <0:
 		sprite.flip_h=true
+		currentmarker=marker2
 
 
 
