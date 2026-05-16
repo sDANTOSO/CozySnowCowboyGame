@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://gtixp503hb7v"]
+
+[ext_resource type="Script" uid="uid://d32kqv0cwt7en" path="res://marsh_drops.gd" id="1_fb8uy"]
+[ext_resource type="Texture2D" uid="uid://dhtdujkrgx7i0" path="res://Assets/Marsh1.png" id="1_ub1an"]
+[ext_resource type="Texture2D" uid="uid://dfssmvydse2ag" path="res://Assets/Marsh2.png" id="2_fb8uy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yo1y1"]
+radius = 2.0
+height = 6.0
+
+[node name="MarshDrop" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 447
+script = ExtResource("1_fb8uy")
+
+[node name="Marsh1" type="Sprite2D" parent="."]
+texture = ExtResource("1_ub1an")
+
+[node name="Marsh2" type="Sprite2D" parent="."]
+texture = ExtResource("2_fb8uy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_yo1y1")

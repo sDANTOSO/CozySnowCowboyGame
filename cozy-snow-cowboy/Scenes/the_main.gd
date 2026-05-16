@@ -2,6 +2,7 @@ extends Node2D
 
 
 var laserball_scene = preload("res://Scenes/laserball.tscn")
+var marsh_scene = preload("res://MarshDrops.tscn")
 var gamePaused=false 
 #func _ready() -> void:
 	#for scout in get_tree().get_nodes_in_group('Scouts'):
@@ -38,3 +39,14 @@ func create_laser(pos,direction):
 		var laser1= laser
 		$Projectiles.add_child(laser)
 		
+
+
+func _on_main_tree_marshdropped(pos: Variant) -> void:
+	create_marsh(pos)
+	
+	
+func create_marsh(pos):
+	var marsh = marsh_scene.instantiate()
+	marsh.position = pos
+	var marsh1 = marsh
+	$Marshmallows.add_child(marsh)

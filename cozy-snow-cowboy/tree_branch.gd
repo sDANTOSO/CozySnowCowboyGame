@@ -2,6 +2,8 @@ extends RigidBody2D
 
 @onready var branch: RigidBody2D =$"."
 @onready var cryo: Node2D =$"../../Capybara"
+@onready var tree: StaticBody2D = $"../MainTree"
+
 var hey = false
 
 func _ready() -> void:
@@ -12,6 +14,7 @@ func hit () -> void:
 	hey=true
 	branch.gravity_scale=1.0
 	cryo.hit()
+	tree.hit()
 	print("yay")
 	
 	

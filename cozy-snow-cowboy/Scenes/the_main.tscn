@@ -9,6 +9,8 @@ script = ExtResource("1_mukro")
 
 [node name="Projectiles" type="Node2D" parent="."]
 
+[node name="Marshmallows" type="Node2D" parent="."]
+
 [node name="Maincharacter" parent="." instance=ExtResource("1_1vb85")]
 
 [node name="Camera2D" type="Camera2D" parent="Maincharacter"]
