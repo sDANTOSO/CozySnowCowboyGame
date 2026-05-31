@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cl27gce87xswb"]
+[gd_scene load_steps=10 format=3 uid="uid://cl27gce87xswb"]
 
+[ext_resource type="Script" uid="uid://bd6akpih2ku25" path="res://firebush.gd" id="1_1pobd"]
 [ext_resource type="Texture2D" uid="uid://dvajnjd2u6465" path="res://Assets/FireBush.png" id="1_uyq6c"]
 [ext_resource type="Texture2D" uid="uid://dyue5ymielb74" path="res://Assets/smoke.png" id="2_fq2q1"]
 
@@ -35,6 +36,7 @@ color_ramp = SubResource("GradientTexture1D_eevxv")
 turbulence_enabled = true
 
 [node name="Firebush" type="StaticBody2D"]
+script = ExtResource("1_1pobd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2.999998, 2.9999962)

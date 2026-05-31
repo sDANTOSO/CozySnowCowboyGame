@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjm7ois8qg6m4"]
+[gd_scene load_steps=5 format=3 uid="uid://bjm7ois8qg6m4"]
 
 [ext_resource type="Script" uid="uid://jbnrh7rgbvy1" path="res://main_menu.gd" id="1_28flt"]
 [ext_resource type="Texture2D" uid="uid://c4pn1uag4uoom" path="res://Assets/title.png" id="2_48xlc"]
+[ext_resource type="PackedScene" uid="uid://vkpulhv270xm" path="res://pause_menu.tscn" id="3_1ehe0"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_1ehe0"]
 
@@ -20,7 +21,7 @@ offset_right = 1154.0
 offset_bottom = 659.0
 color = Color(0.1408, 0.17962667, 0.32, 1)
 
-[node name="TextureButton" type="Button" parent="Control"]
+[node name="Pause" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 93.0
 offset_top = 459.0
@@ -29,7 +30,7 @@ offset_bottom = 624.0
 text = "Controls
 "
 
-[node name="Button" type="Button" parent="Control"]
+[node name="Start" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 429.0
 offset_top = 426.0
@@ -53,6 +54,20 @@ offset_right = 1156.0
 offset_bottom = 428.0
 texture = ExtResource("2_48xlc")
 
-[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[node name="PauseMenu" parent="Control" instance=ExtResource("3_1ehe0")]
+visible = false
+layout_mode = 0
+offset_left = -83.00001
+offset_top = -94.0
+offset_right = -43.167305
+offset_bottom = -94.0
+scale = Vector2(3.2015502, 3.4849796)
+
+[connection signal="pressed" from="Control/Pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="Control/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Control/Quit" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/PauseMenu/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/PauseMenu/Button2" to="." method="_on_button_2_pressed"]
+
+[editable path="Control/PauseMenu"]

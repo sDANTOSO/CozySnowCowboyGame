@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://ba46857hx57bh"]
+[gd_scene load_steps=12 format=3 uid="uid://ba46857hx57bh"]
 
 [ext_resource type="PackedScene" uid="uid://bua6thnyrktmw" path="res://Scenes/the_main.tscn" id="1_pv3w6"]
 [ext_resource type="PackedScene" uid="uid://dgj5najb6c1qp" path="res://Scenes/the_snow.tscn" id="2_3v7dj"]
+[ext_resource type="PackedScene" uid="uid://b0q78bfvnhcq3" path="res://gun.tscn" id="2_nkhhm"]
 [ext_resource type="PackedScene" uid="uid://cqlvwanlj647b" path="res://Scenes/fourmyle.tscn" id="3_3v7dj"]
 [ext_resource type="PackedScene" uid="uid://cl27gce87xswb" path="res://firebush.tscn" id="3_r4wjs"]
 [ext_resource type="PackedScene" uid="uid://cfckt23m1v4da" path="res://Scenes/tree.tscn" id="4_1jrh8"]
@@ -76,6 +77,9 @@ position = Vector2(-344, 40)
 
 [node name="Maincharacter" parent="." index="9"]
 position = Vector2(110, 34)
+
+[node name="RigidBody2D" parent="." index="10" instance=ExtResource("2_nkhhm")]
+position = Vector2(-214, 53)
 
 [connection signal="player_dont_flip_h" from="Fourmyle" to="Maincharacter" method="_on_fourmyle_player_dont_flip_h"]
 [connection signal="player_flip_h" from="Fourmyle" to="Maincharacter" method="_on_fourmyle_player_flip_h"]

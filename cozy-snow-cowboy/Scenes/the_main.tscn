@@ -24,10 +24,10 @@ limit_bottom = 10000020
 
 [node name="PauseMenu" parent="Maincharacter" instance=ExtResource("3_gyvgq")]
 visible = false
-offset_left = -162.0
-offset_top = -185.0
-offset_right = -162.0
-offset_bottom = -185.0
+offset_left = -223.0
+offset_top = -168.0
+offset_right = -223.0
+offset_bottom = -168.0
 
 [node name="Ground2" type="Marker2D" parent="Maincharacter"]
 position = Vector2(-2, -50)
