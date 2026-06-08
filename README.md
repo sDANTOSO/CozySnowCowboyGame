@@ -1,5 +1,18 @@
-# Winatsa_hackpad
-A hackpad made to fulfill what my current keyboard doesnt do
+# Cozy Snow Space Cowboy
+Add logo 
+![alt text](title.png)
+What your project is and where it can be used
+give project background is a videogame that can be played on windows or itch
+
+What you made it with
+made with godot, and asesprite, maybe link to useful tutorials
+A demo of your project (image or video works!)
+gif?
+How other people can contribute to it
+other people can contribute by letting me know what they like to see or using the project files to expand the world with more mechanics, animals, or biomes
+How it can be deployed
+itch or windows
+
 
 CAD
 
