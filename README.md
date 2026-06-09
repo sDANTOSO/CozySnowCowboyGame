@@ -29,17 +29,6 @@ I would want the scope of this game to be increased greatly in the future but I'
 
 A full implementation of this game would be much more refined using information that I know would improve my game but I didn’t have time to implement. This means having no mixels, increased variety in natural shapes, eg trees and rocks, smoother animation, and more complex animation systems like increasing, decreasing frame rate depending on a characters acceleration. It would also have thousands of animals, lots of alien nature, a wide range of planet locations, a large variety of geographical landmarks and land types, infinite possibilities for cowboy designs, a game with a feeling of endlessness where theres always something new to discover and a new challenge to face. Which appeals in a more custom way to each use with a menu where users can change their key bindings among other things.
 
+## AI
+I did not use AI at all to create the game or the assets 
 
-
-
-What your project is and where it can be used
-give project background is a videogame that can be played on windows or itch
-
-What you made it with
-made with godot, and asesprite, maybe link to useful tutorials
-A demo of your project (image or video works!)
-gif?
-How other people can contribute to it
-other people can contribute by letting me know what they like to see or using the project files to expand the world with more mechanics, animals, or biomes
-How it can be deployed
-itch or windows
