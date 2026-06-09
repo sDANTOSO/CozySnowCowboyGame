@@ -1,6 +1,6 @@
 # Cozy Snow Space Cowboy
-Add logo 
-![alt text](title.png)
+
+<img width="990" height="698" ![alt text](title.png)
 What your project is and where it can be used
 give project background is a videogame that can be played on windows or itch
 
