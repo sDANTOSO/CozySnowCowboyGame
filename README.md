@@ -18,7 +18,7 @@ My game was made with godot and the assets were made with asesprite. I mostly us
 <img src="Images/gameplay.gif" alt="Gameplay" width="600" height="688">
 My game can be played on Windows by running the .exe file 
 
-My game can also be played on itch here:
+My game can also be played on itch (doesnt quite look as good) here:
 
 https://starkbrix.itch.io/cozy-snow-space-cowboy
 
