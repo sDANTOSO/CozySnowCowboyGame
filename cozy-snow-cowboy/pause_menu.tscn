@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://vkpulhv270xm"]
+[gd_scene format=3 uid="uid://vkpulhv270xm"]
 
 [ext_resource type="Texture2D" uid="uid://bwu4c4sg7668k" path="res://Assets/MenuBG.png" id="1_hdmo1"]
 [ext_resource type="Script" uid="uid://d1u6l3il4abpq" path="res://pause_menu.gd" id="1_nwcfo"]
@@ -11,20 +11,20 @@ font = ExtResource("3_05uyy")
 font_size = 12
 font_color = Color(0, 0, 0, 1)
 
-[node name="PauseMenu" type="Control"]
+[node name="PauseMenu" type="Control" unique_id=7175401]
 process_mode = 2
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_nwcfo")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1315117471]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(1.2800006, 1.0399998)
 texture = ExtResource("1_hdmo1")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1449515953]
 layout_mode = 0
 offset_left = 101.0
 offset_top = 185.0
@@ -33,7 +33,7 @@ offset_bottom = 216.0
 text = "Continue"
 icon = SubResource("ImageTexture_nwcfo")
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="." unique_id=1620152130]
 layout_mode = 0
 offset_left = 241.0
 offset_top = 180.0
@@ -42,7 +42,7 @@ offset_bottom = 211.0
 text = "Quit"
 icon = SubResource("ImageTexture_nwcfo")
 
-[node name="Continue" type="Label" parent="."]
+[node name="Continue" type="Label" parent="." unique_id=976500561]
 layout_mode = 0
 offset_left = 175.0
 offset_top = 42.0
@@ -51,16 +51,16 @@ offset_bottom = 65.0
 text = "Esc to open control menu"
 label_settings = SubResource("LabelSettings_nwcfo")
 
-[node name="Continue7" type="Label" parent="."]
+[node name="Continue7" type="Label" parent="." unique_id=1307278527]
 layout_mode = 0
 offset_left = 176.0
 offset_top = 72.0
 offset_right = 313.0
 offset_bottom = 95.0
-text = "Pickup Marsh = F"
+text = "Pickup = F"
 label_settings = SubResource("LabelSettings_nwcfo")
 
-[node name="Continue8" type="Label" parent="."]
+[node name="Continue8" type="Label" parent="." unique_id=1690926015]
 layout_mode = 0
 offset_left = 253.0
 offset_top = 95.0
@@ -69,7 +69,7 @@ offset_bottom = 118.0
 text = "Pullout gun = Shift"
 label_settings = SubResource("LabelSettings_nwcfo")
 
-[node name="Continue9" type="Label" parent="."]
+[node name="Continue9" type="Label" parent="." unique_id=959954107]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 94.0
@@ -78,7 +78,7 @@ offset_bottom = 117.0
 text = "Pullout Marshmallow on a stick = Q"
 label_settings = SubResource("LabelSettings_nwcfo")
 
-[node name="Continue5" type="Label" parent="."]
+[node name="Continue5" type="Label" parent="." unique_id=828022451]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 128.0
@@ -87,7 +87,7 @@ offset_bottom = 151.0
 text = "To ride Fourmyle jump on it"
 label_settings = SubResource("LabelSettings_nwcfo")
 
-[node name="Continue6" type="Label" parent="."]
+[node name="Continue6" type="Label" parent="." unique_id=317209]
 layout_mode = 0
 offset_left = 96.0
 offset_top = 153.0
@@ -96,16 +96,16 @@ offset_bottom = 176.0
 text = "You can break branches and cliff ledges"
 label_settings = SubResource("LabelSettings_nwcfo")
 
-[node name="Continue2" type="Label" parent="."]
+[node name="Continue2" type="Label" parent="." unique_id=570099463]
 layout_mode = 0
 offset_left = 68.0
 offset_top = 42.0
 offset_right = 150.0
 offset_bottom = 65.0
-text = "Move = D & S"
+text = "Move = D & A"
 label_settings = SubResource("LabelSettings_nwcfo")
 
-[node name="Continue3" type="Label" parent="."]
+[node name="Continue3" type="Label" parent="." unique_id=604176780]
 layout_mode = 0
 offset_left = 61.0
 offset_top = 71.0
@@ -114,7 +114,7 @@ offset_bottom = 94.0
 text = "Jump = Space/W"
 label_settings = SubResource("LabelSettings_nwcfo")
 
-[node name="Continue4" type="Label" parent="."]
+[node name="Continue4" type="Label" parent="." unique_id=281574931]
 layout_mode = 0
 offset_left = 242.0
 offset_top = 129.0

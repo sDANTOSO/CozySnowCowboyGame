@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjm7ois8qg6m4"]
+[gd_scene format=3 uid="uid://bjm7ois8qg6m4"]
 
 [ext_resource type="Script" uid="uid://jbnrh7rgbvy1" path="res://main_menu.gd" id="1_28flt"]
 [ext_resource type="Texture2D" uid="uid://c4pn1uag4uoom" path="res://Assets/title.png" id="2_48xlc"]
@@ -6,22 +6,22 @@
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_1ehe0"]
 
-[node name="Main menu" type="Node2D"]
+[node name="Main menu" type="Node2D" unique_id=2027899902]
 script = ExtResource("1_28flt")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=687608604]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=245700138]
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 659.0
 color = Color(0.1408, 0.17962667, 0.32, 1)
 
-[node name="Pause" type="Button" parent="Control"]
+[node name="Pause" type="Button" parent="Control" unique_id=1838114293]
 layout_mode = 0
 offset_left = 93.0
 offset_top = 459.0
@@ -30,7 +30,7 @@ offset_bottom = 624.0
 text = "Controls
 "
 
-[node name="Start" type="Button" parent="Control"]
+[node name="Start" type="Button" parent="Control" unique_id=1869935473]
 layout_mode = 0
 offset_left = 429.0
 offset_top = 426.0
@@ -38,7 +38,7 @@ offset_right = 692.0
 offset_bottom = 588.0
 text = "Start"
 
-[node name="Quit" type="Button" parent="Control"]
+[node name="Quit" type="Button" parent="Control" unique_id=1716519204]
 layout_mode = 0
 offset_left = 775.0
 offset_top = 456.0
@@ -48,13 +48,13 @@ text = "Quit
 "
 icon = SubResource("ViewportTexture_1ehe0")
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=220964095]
 layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 428.0
 texture = ExtResource("2_48xlc")
 
-[node name="PauseMenu" parent="Control" instance=ExtResource("3_1ehe0")]
+[node name="PauseMenu" parent="Control" unique_id=940990709 instance=ExtResource("3_1ehe0")]
 visible = false
 layout_mode = 0
 offset_left = -83.00001
@@ -62,6 +62,12 @@ offset_top = -94.0
 offset_right = -43.167305
 offset_bottom = -94.0
 scale = Vector2(3.2015502, 3.4849796)
+
+[node name="Continue7" parent="Control/PauseMenu" index="4"]
+text = "Pickup = F"
+
+[node name="Continue2" parent="Control/PauseMenu" index="9"]
+text = "Move = D & A"
 
 [connection signal="pressed" from="Control/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="Control/Start" to="." method="_on_start_pressed"]
