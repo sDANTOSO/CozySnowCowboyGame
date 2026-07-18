@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://8lv3mgipaqx6"]
+
+[ext_resource type="Texture2D" uid="uid://di62c5ejrf66c" path="res://Assets/birbanimationv1.png" id="1_buorm"]
+[ext_resource type="Script" uid="uid://y7enm784tly3" path="res://birb.gd" id="1_s8u3n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8u3n"]
+atlas = ExtResource("1_buorm")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4c0a"]
+atlas = ExtResource("1_buorm")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeidj"]
+atlas = ExtResource("1_buorm")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7t4e"]
+atlas = ExtResource("1_buorm")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fyu0"]
+atlas = ExtResource("1_buorm")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2k33r"]
+atlas = ExtResource("1_buorm")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ilkqt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8u3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4c0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oeidj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7t4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fyu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2k33r")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=740471884]
+script = ExtResource("1_s8u3n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=87865800]
+position = Vector2(0, 11)
+sprite_frames = SubResource("SpriteFrames_ilkqt")
+frame = 5
+frame_progress = 0.084398
+
+[node name="StartTimer" type="Timer" parent="." unique_id=2081944608]
+wait_time = 5.0
+
+[node name="RightTimer" type="Timer" parent="." unique_id=659811851]
+
+[node name="LeftTimer" type="Timer" parent="." unique_id=1182721646]
+
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="timeout" from="RightTimer" to="." method="_on_right_timer_timeout"]
+[connection signal="timeout" from="LeftTimer" to="." method="_on_left_timer_timeout"]
