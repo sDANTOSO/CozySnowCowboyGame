@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://5fj8vw51ttiq"]
+[gd_scene format=3 uid="uid://5fj8vw51ttiq"]
 
 [ext_resource type="Script" uid="uid://ct5r4iipjjje2" path="res://Scripts/Lingeringcharacter.gd" id="1_flaqb"]
 [ext_resource type="Texture2D" uid="uid://dss0jptvl41f5" path="res://Assets/lucia-barrero-habilidx-sam-removebg-preview.png" id="2_3ommq"]
@@ -217,11 +217,8 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_sdasw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_3ommq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Shoot",
 "speed": 0.1
 }, {
@@ -229,7 +226,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_b68jv")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Toasting",
 "speed": 10.0
 }, {
@@ -237,7 +234,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_3ommq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }, {
@@ -347,7 +344,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kea3d")
 }],
-"loop": false,
+"loop": 0,
 "name": &"melting",
 "speed": 2.0
 }, {
@@ -400,7 +397,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2yrao")
 }],
-"loop": false,
+"loop": 0,
 "name": &"melting1",
 "speed": 1.0
 }]
@@ -411,49 +408,47 @@ height = 24.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sdasw"]
 
-[node name="Maincharacter" type="CharacterBody2D"]
+[node name="Maincharacter" type="CharacterBody2D" unique_id=2050541768]
 position = Vector2(14, 0)
 collision_mask = 575
 script = ExtResource("1_flaqb")
 
-[node name="CharacterSprite" type="AnimatedSprite2D" parent="."]
+[node name="CharacterSprite" type="AnimatedSprite2D" parent="." unique_id=1795468965]
 position = Vector2(-10.000001, 1)
 scale = Vector2(0.088, 0.088)
 sprite_frames = SubResource("SpriteFrames_b68jv")
-animation = &"melting"
-frame = 34
-frame_progress = 1.0
+animation = &"Shoot"
 offset = Vector2(124.99989, -34.090904)
 flip_h = true
 
-[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+[node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=245021221]
 position = Vector2(-2, 0)
 shape = SubResource("CapsuleShape2D_0aigr")
 
-[node name="Lasercooldown" type="Timer" parent="."]
+[node name="Lasercooldown" type="Timer" parent="." unique_id=1803518376]
 wait_time = 0.5
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1746689382]
 visible = false
 position = Vector2(-50.3125, 30)
 scale = Vector2(0.093992256, 0.0878553)
 texture = ExtResource("2_3ommq")
 
-[node name="Gun" type="Sprite2D" parent="."]
+[node name="Gun" type="Sprite2D" parent="." unique_id=1736901825]
 visible = false
 position = Vector2(-2, 36)
 texture = ExtResource("3_3ommq")
 
-[node name="Marker2D" type="Marker2D" parent="."]
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1130176937]
 position = Vector2(13, 0)
 
-[node name="Marker2D2" type="Marker2D" parent="."]
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=1370241698]
 position = Vector2(-11, 0)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1810063159]
 collision_mask = 5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1633839746]
 position = Vector2(1, 4)
 shape = SubResource("RectangleShape2D_sdasw")
 

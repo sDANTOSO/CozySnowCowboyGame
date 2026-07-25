@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c5vbxx7og15na"]
+[gd_scene format=3 uid="uid://c5vbxx7og15na"]
 
 [ext_resource type="Texture2D" uid="uid://bitcqu6mxt8p4" path="res://Assets/Crapler.png" id="1_4w32r"]
 [ext_resource type="Script" uid="uid://blx606kekoc5l" path="res://crapler.gd" id="1_jfx1f"]
@@ -89,7 +89,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g0fic")
 }],
-"loop": true,
+"loop": 1,
 "name": &"damage",
 "speed": 5.0
 }, {
@@ -97,7 +97,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_4w32r")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -105,28 +105,28 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_umyak"]
 radius = 8.0
 
-[node name="Crapler" type="Node2D"]
+[node name="Crapler" type="Node2D" unique_id=1416556295]
 script = ExtResource("1_jfx1f")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1616868785]
 collision_layer = 2
 collision_mask = 1023
 script = ExtResource("2_umyak")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1656566769]
 position = Vector2(0, 10)
 rotation = -1.5707964
 shape = SubResource("CapsuleShape2D_jfx1f")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D" unique_id=892899489]
 sprite_frames = SubResource("SpriteFrames_jfx1f")
 animation = &"damage"
 
-[node name="Area2D" type="Area2D" parent="RigidBody2D"]
+[node name="Area2D" type="Area2D" parent="RigidBody2D" unique_id=130939399]
 collision_layer = 2
 collision_mask = 1023
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D" unique_id=870844213]
 position = Vector2(0, 10)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_umyak")

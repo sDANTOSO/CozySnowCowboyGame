@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://jbnrh7rgbvy1" path="res://main_menu.gd" id="1_28flt"]
 [ext_resource type="Texture2D" uid="uid://c4pn1uag4uoom" path="res://Assets/title.png" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://r2taswas00ht" path="res://Assets/Startbutton.png" id="2_ce3w2"]
 [ext_resource type="PackedScene" uid="uid://vkpulhv270xm" path="res://pause_menu.tscn" id="3_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://cfialtcipyovl" path="res://Assets/StartPress.png" id="3_opfnp"]
+[ext_resource type="Texture2D" uid="uid://c6hqjh86ymof4" path="res://Assets/StartHover.png" id="4_cp0ys"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_1ehe0"]
 
@@ -30,7 +33,19 @@ offset_bottom = 624.0
 text = "Controls
 "
 
+[node name="TextureButton" type="TextureButton" parent="Control" unique_id=664113724]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 153.0
+offset_right = 980.0
+offset_bottom = 793.0
+texture_normal = ExtResource("2_ce3w2")
+texture_pressed = ExtResource("3_opfnp")
+texture_hover = ExtResource("4_cp0ys")
+stretch_mode = 3
+
 [node name="Start" type="Button" parent="Control" unique_id=1869935473]
+visible = false
 layout_mode = 0
 offset_left = 429.0
 offset_top = 426.0
@@ -50,8 +65,9 @@ icon = SubResource("ViewportTexture_1ehe0")
 
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=220964095]
 layout_mode = 0
-offset_right = 1156.0
-offset_bottom = 428.0
+offset_left = 397.0
+offset_right = 772.0
+offset_bottom = 235.0
 texture = ExtResource("2_48xlc")
 
 [node name="PauseMenu" parent="Control" unique_id=940990709 instance=ExtResource("3_1ehe0")]
@@ -62,12 +78,6 @@ offset_top = -94.0
 offset_right = -43.167305
 offset_bottom = -94.0
 scale = Vector2(3.2015502, 3.4849796)
-
-[node name="Continue7" parent="Control/PauseMenu" index="4"]
-text = "Pickup = F"
-
-[node name="Continue2" parent="Control/PauseMenu" index="9"]
-text = "Move = D & A"
 
 [connection signal="pressed" from="Control/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="Control/Start" to="." method="_on_start_pressed"]

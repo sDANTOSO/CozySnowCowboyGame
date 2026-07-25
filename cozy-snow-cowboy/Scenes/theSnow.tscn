@@ -18,7 +18,7 @@
 [node name="The snow" parent="." index="0" unique_id=1229778543 instance=ExtResource("2_3v7dj")]
 position = Vector2(68, 10)
 
-[node name="Firebush" parent="The snow" index="7" unique_id=1119140886 instance=ExtResource("3_r4wjs")]
+[node name="Firebush" parent="The snow" index="6" unique_id=1119140886 instance=ExtResource("3_r4wjs")]
 position = Vector2(87, 68)
 
 [node name="Fourmyle" parent="." index="3" unique_id=1515156760 instance=ExtResource("3_3v7dj")]
@@ -28,12 +28,12 @@ collision_mask = 575
 [node name="Tree" parent="." index="4" unique_id=187814113 instance=ExtResource("4_1jrh8")]
 position = Vector2(330, -77)
 
-[node name="RemoteTransform2D" parent="Tree/TreeBranch" index="4"]
+[node name="RemoteTransform2D" parent="Tree/TreeBranch" parent_id_path=PackedInt32Array(187814113, 51675635) index="4" unique_id=2012324269]
 remote_path = NodePath("../../../Capybara")
 update_rotation = false
 
 [node name="Blobfish" parent="." index="5" unique_id=2110846823 instance=ExtResource("5_s8ngn")]
-position = Vector2(-381, -77)
+position = Vector2(-719, -77)
 
 [node name="Capybara" parent="." index="6" unique_id=2031350376 instance=ExtResource("5_rceaq")]
 position = Vector2(330, -77)
@@ -61,23 +61,24 @@ center_of_mass = Vector2(-696, -112)
 script = ExtResource("6_g2qjc")
 
 [node name="Cliff" type="Sprite2D" parent="Unstable" index="0" unique_id=1767438472]
-position = Vector2(-694, -111)
+position = Vector2(-1030, -111)
 texture = ExtResource("6_rceaq")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable" index="1" unique_id=33390685]
-position = Vector2(-694, -111)
-polygon = PackedVector2Array(-10, -5, 2, -6, 6, -1, 2, 4, -1, 1, -8, 7)
+position = Vector2(-656, -119)
+polygon = PackedVector2Array(-385, 2, -373, 1, -369, 6, -373, 11, -376, 8, -383, 14)
 
 [node name="Area2D" type="Area2D" parent="Unstable" index="2" unique_id=1601639588]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable/Area2D" index="0" unique_id=1022136111]
+position = Vector2(-333, -1)
 polygon = PackedVector2Array(-715, -104, -706, -104, -708, -116)
 
 [node name="Crapler" parent="." index="8" unique_id=1127615543 instance=ExtResource("9_8xish")]
 position = Vector2(-344, 40)
 
 [node name="Maincharacter" parent="." index="9"]
-position = Vector2(-515, 45)
+position = Vector2(36, 51)
 
 [node name="Camera2D" parent="Maincharacter" index="8"]
 limit_left = -780
@@ -85,8 +86,8 @@ limit_left = -780
 [node name="RigidBody2D" parent="." index="10" unique_id=635907953 instance=ExtResource("2_nkhhm")]
 position = Vector2(-214, 53)
 
-[node name="Birb" parent="." index="11" unique_id=740471884 instance=ExtResource("12_3odrw")]
-position = Vector2(-918, -148)
+[node name="Birb" parent="." index="11" unique_id=466185599 instance=ExtResource("12_3odrw")]
+position = Vector2(-918, -160)
 
 [connection signal="player_dont_flip_h" from="Fourmyle" to="Maincharacter" method="_on_fourmyle_player_dont_flip_h"]
 [connection signal="player_flip_h" from="Fourmyle" to="Maincharacter" method="_on_fourmyle_player_flip_h"]

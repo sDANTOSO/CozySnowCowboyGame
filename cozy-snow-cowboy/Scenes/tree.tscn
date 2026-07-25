@@ -1,30 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfckt23m1v4da"]
+[gd_scene format=3 uid="uid://cfckt23m1v4da"]
 
 [ext_resource type="Texture2D" uid="uid://bwue8axxcekfg" path="res://Assets/MarshTree.png" id="1_brfkd"]
 [ext_resource type="Script" uid="uid://dgeiqi4b3opn8" path="res://Scenes/main_tree.gd" id="1_l3oha"]
 [ext_resource type="Script" uid="uid://byruqnhy4ckrs" path="res://tree_branch.gd" id="2_gvmkm"]
 [ext_resource type="Texture2D" uid="uid://c0jgo6dxexrel" path="res://Assets/MarshTreeBranch.png" id="2_nnvrw"]
 
-[node name="Tree" type="Node2D"]
+[node name="Tree" type="Node2D" unique_id=610971291]
 position = Vector2(33, 4)
 
-[node name="MainTree" type="StaticBody2D" parent="."]
+[node name="MainTree" type="StaticBody2D" parent="." unique_id=142724781]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_l3oha")
 
-[node name="MarshTree" type="Sprite2D" parent="MainTree"]
+[node name="MarshTree" type="Sprite2D" parent="MainTree" unique_id=1218475566]
 position = Vector2(57, 2)
 texture = ExtResource("1_brfkd")
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MainTree"]
-visible = false
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MainTree" unique_id=282953140]
 position = Vector2(57, 2)
 polygon = PackedVector2Array(-4, 90, 85, 90, 88, 81, 83, 71, 85, 55, 79, 51, 79, 34, 74, 26, 76, 7, 72, -4, 86, 3, 113, 5, 133, -9, 132, -58, 86, -80, 53, -83, 26, -76, -51, -84, -88, -75, -114, -51, -127, -42, -133, -31, -116, -18, -104, 0, -75.666664, -27.333336, -11, -32.666668, 28.333336, -34, 27, -8, 30, 3, 30, 15, 38, 28, 31, 43, 21, 60, 16, 74)
 
-[node name="Timer" type="Timer" parent="MainTree"]
+[node name="Timer" type="Timer" parent="MainTree" unique_id=1318186014]
 wait_time = 10.0
 
-[node name="TreeBranch" type="RigidBody2D" parent="."]
+[node name="TreeBranch" type="RigidBody2D" parent="." unique_id=51675635]
 collision_layer = 96
 collision_mask = 33
 mass = 5.0
@@ -33,80 +32,80 @@ center_of_mass_mode = 1
 center_of_mass = Vector2(81, 22)
 script = ExtResource("2_gvmkm")
 
-[node name="Sprite2D" type="Sprite2D" parent="TreeBranch"]
+[node name="Sprite2D" type="Sprite2D" parent="TreeBranch" unique_id=9646319]
 position = Vector2(9, 15)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_nnvrw")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TreeBranch"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TreeBranch" unique_id=1069933394]
 position = Vector2(10, -26)
 scale = Vector2(1.5, 1.5)
 polygon = PackedVector2Array(-10, 29, -5, 26, 5, 23, 19, 26, 22, 25, 28, 23, 32, 26, 35, 28, 38, 29, 44, 26, 49, 25, 54, 24, 63, 23, 65, 25, 68, 25, 72, 24, 78, 28, 77, 34, 76, 38, 69, 36, 63, 36, 60, 39, 52, 39, 50, 36, 47, 36, 42, 36, 40, 36, 34, 36, 30, 36, 30, 37, 28, 37, 28, 38, 26, 38, 26, 39, 24, 39, 24, 38, 23, 38, 23, 37, 22, 37, 22, 36, 19, 36, 19, 37, 16, 37, 16, 38, 14, 38, 14, 37, 12, 37, 11, 36, 11, 35, 9, 35, 9, 34, 5, 34, 5, 35, 3, 35, 3, 36, 2, 36, 1, 35, 1, 34, -2, 34, -2, 35, -4, 37, -6, 37, -6, 36, -12, 35)
 
-[node name="Area2D" type="Area2D" parent="TreeBranch"]
+[node name="Area2D" type="Area2D" parent="TreeBranch" unique_id=133004113]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TreeBranch/Area2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TreeBranch/Area2D" unique_id=756698935]
 polygon = PackedVector2Array(91, 37, 104, 39, 122, 43, 136, 34, 136, 22, 126, 25, 123, 16, 107, 13, 91, 15, 85, 30)
 
-[node name="Marker2D" type="Marker2D" parent="TreeBranch"]
+[node name="Marker2D" type="Marker2D" parent="TreeBranch" unique_id=1003984466]
 position = Vector2(81, 19)
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="TreeBranch"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="TreeBranch" unique_id=2012324269]
 
-[node name="Marsh Starting Points" type="Node2D" parent="."]
+[node name="Marsh Starting Points" type="Node2D" parent="." unique_id=1784617617]
 
-[node name="Marker2D" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D" type="Marker2D" parent="Marsh Starting Points" unique_id=1035603188]
 position = Vector2(-68, 7)
 
-[node name="Marker2D2" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D2" type="Marker2D" parent="Marsh Starting Points" unique_id=1397296319]
 position = Vector2(-52, 7)
 
-[node name="Marker2D3" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D3" type="Marker2D" parent="Marsh Starting Points" unique_id=916916349]
 position = Vector2(-83, -7)
 
-[node name="Marker2D4" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D4" type="Marker2D" parent="Marsh Starting Points" unique_id=1853369028]
 position = Vector2(-91, -22)
 
-[node name="Marker2D5" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D5" type="Marker2D" parent="Marsh Starting Points" unique_id=322205034]
 position = Vector2(-107, -29)
 
-[node name="Marker2D6" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D6" type="Marker2D" parent="Marsh Starting Points" unique_id=1715317978]
 position = Vector2(-113, -38)
 
-[node name="Marker2D7" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D7" type="Marker2D" parent="Marsh Starting Points" unique_id=1960607082]
 position = Vector2(-34, 0)
 
-[node name="Marker2D8" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D8" type="Marker2D" parent="Marsh Starting Points" unique_id=1201071842]
 position = Vector2(-14, 0)
 
-[node name="Marker2D9" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D9" type="Marker2D" parent="Marsh Starting Points" unique_id=1732057841]
 position = Vector2(0, 4)
 
-[node name="Marker2D10" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D10" type="Marker2D" parent="Marsh Starting Points" unique_id=402264680]
 position = Vector2(13, 7)
 
-[node name="Marker2D11" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D11" type="Marker2D" parent="Marsh Starting Points" unique_id=770025172]
 position = Vector2(25, 6)
 
-[node name="Marker2D12" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D12" type="Marker2D" parent="Marsh Starting Points" unique_id=2042323670]
 position = Vector2(37, 10)
 
-[node name="Marker2D13" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D13" type="Marker2D" parent="Marsh Starting Points" unique_id=199285323]
 position = Vector2(46, 7)
 
-[node name="Marker2D14" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D14" type="Marker2D" parent="Marsh Starting Points" unique_id=718737781]
 position = Vector2(56, 4)
 
-[node name="Marker2D15" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D15" type="Marker2D" parent="Marsh Starting Points" unique_id=238978193]
 position = Vector2(70, 4)
 
-[node name="Marker2D16" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D16" type="Marker2D" parent="Marsh Starting Points" unique_id=1579284772]
 position = Vector2(84, 6)
 
-[node name="Marker2D17" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D17" type="Marker2D" parent="Marsh Starting Points" unique_id=1708037699]
 position = Vector2(96, 7)
 
-[node name="Marker2D18" type="Marker2D" parent="Marsh Starting Points"]
+[node name="Marker2D18" type="Marker2D" parent="Marsh Starting Points" unique_id=341050091]
 position = Vector2(109, 10)
 
 [connection signal="timeout" from="MainTree/Timer" to="MainTree" method="_on_timer_timeout"]
