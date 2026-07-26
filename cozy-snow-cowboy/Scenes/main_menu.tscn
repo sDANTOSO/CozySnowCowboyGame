@@ -2,10 +2,13 @@
 
 [ext_resource type="Script" uid="uid://jbnrh7rgbvy1" path="res://main_menu.gd" id="1_28flt"]
 [ext_resource type="Texture2D" uid="uid://c4pn1uag4uoom" path="res://Assets/title.png" id="2_48xlc"]
-[ext_resource type="Texture2D" uid="uid://r2taswas00ht" path="res://Assets/Startbutton.png" id="2_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://dh5bbd5bhmnwc" path="res://Assets/StartHover-export.png" id="2_yhxw7"]
 [ext_resource type="PackedScene" uid="uid://vkpulhv270xm" path="res://pause_menu.tscn" id="3_1ehe0"]
 [ext_resource type="Texture2D" uid="uid://cfialtcipyovl" path="res://Assets/StartPress.png" id="3_opfnp"]
-[ext_resource type="Texture2D" uid="uid://c6hqjh86ymof4" path="res://Assets/StartHover.png" id="4_cp0ys"]
+[ext_resource type="Script" uid="uid://bp0bp86tpfasj" path="res://Scenes/StartButton.gd" id="5_cp0ys"]
+[ext_resource type="BitMap" uid="uid://byood8l5uys1b" path="res://Assets/Startbuttondetect.png" id="5_yhxw7"]
+
+[sub_resource type="Theme" id="Theme_opfnp"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_1ehe0"]
 
@@ -26,23 +29,31 @@ color = Color(0.1408, 0.17962667, 0.32, 1)
 
 [node name="Pause" type="Button" parent="Control" unique_id=1838114293]
 layout_mode = 0
-offset_left = 93.0
-offset_top = 459.0
-offset_right = 384.0
-offset_bottom = 624.0
+offset_left = 45.0
+offset_top = 334.0
+offset_right = 336.0
+offset_bottom = 499.0
 text = "Controls
 "
 
-[node name="TextureButton" type="TextureButton" parent="Control" unique_id=664113724]
+[node name="StartButton" type="TextureButton" parent="Control" unique_id=664113724]
 layout_mode = 0
-offset_left = 160.0
-offset_top = 153.0
-offset_right = 980.0
-offset_bottom = 793.0
-texture_normal = ExtResource("2_ce3w2")
+offset_left = 158.0
+offset_top = 157.0
+offset_right = 990.0
+offset_bottom = 925.0
+theme = SubResource("Theme_opfnp")
+texture_normal = ExtResource("2_yhxw7")
 texture_pressed = ExtResource("3_opfnp")
-texture_hover = ExtResource("4_cp0ys")
+texture_click_mask = ExtResource("5_yhxw7")
 stretch_mode = 3
+script = ExtResource("5_cp0ys")
+
+[node name="Area2D" type="Area2D" parent="Control/StartButton" unique_id=1561074848]
+position = Vector2(0, 55)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Control/StartButton/Area2D" unique_id=456132292]
+polygon = PackedVector2Array(168, 495, 200, 455, 210, 351, 341, 202, 400, 167, 444, 201, 550, 233, 622, 306, 633, 404, 644, 511, 166, 511)
 
 [node name="Start" type="Button" parent="Control" unique_id=1869935473]
 visible = false
@@ -55,10 +66,10 @@ text = "Start"
 
 [node name="Quit" type="Button" parent="Control" unique_id=1716519204]
 layout_mode = 0
-offset_left = 775.0
-offset_top = 456.0
-offset_right = 1038.0
-offset_bottom = 618.0
+offset_left = 877.0
+offset_top = 334.0
+offset_right = 1140.0
+offset_bottom = 496.0
 text = "Quit
 "
 icon = SubResource("ViewportTexture_1ehe0")
@@ -80,6 +91,9 @@ offset_bottom = -94.0
 scale = Vector2(3.2015502, 3.4849796)
 
 [connection signal="pressed" from="Control/Pause" to="." method="_on_pause_pressed"]
+[connection signal="mouse_entered" from="Control/StartButton" to="Control/StartButton" method="_on_mouse_entered"]
+[connection signal="pressed" from="Control/StartButton" to="Control/StartButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Control/StartButton/Area2D" to="Control/StartButton" method="_on_area_2d_mouse_entered"]
 [connection signal="pressed" from="Control/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Control/Quit" to="." method="_on_button_pressed"]
