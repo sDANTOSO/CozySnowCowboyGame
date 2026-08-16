@@ -27,5 +27,6 @@ func _on_pressed() -> void:
 
 
 func _on_area_2d_mouse_entered() -> void:
-	
+	var tween = get_tree().create_tween()
+	tween.tween_property($".", "position", Vector2(158,88), 2.0)
 	pass # Replace with function body.
