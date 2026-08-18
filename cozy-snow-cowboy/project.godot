@@ -30,6 +30,10 @@ project/assembly_name="CozySnowCowboy"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[gui]
+
+common/snap_controls_to_pixels=false
+
 [input]
 
 left={

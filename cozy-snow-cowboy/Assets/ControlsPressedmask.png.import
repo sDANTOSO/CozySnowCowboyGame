@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b0r6bb58cas0o"
+path="res://.godot/imported/ControlsPressedmask.png-1ac4f56ea001934a13dd321377386028.res"
+
+[deps]
+
+source_file="res://Assets/ControlsPressedmask.png"
+dest_files=["res://.godot/imported/ControlsPressedmask.png-1ac4f56ea001934a13dd321377386028.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

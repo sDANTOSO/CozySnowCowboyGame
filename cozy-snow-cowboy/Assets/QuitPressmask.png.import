@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://brmeq71nf0rs3"
+path="res://.godot/imported/QuitPressmask.png-399b044b2f69475075afffa522cc9506.res"
+
+[deps]
+
+source_file="res://Assets/QuitPressmask.png"
+dest_files=["res://.godot/imported/QuitPressmask.png-399b044b2f69475075afffa522cc9506.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
