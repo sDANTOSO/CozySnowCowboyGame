@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://bp0bp86tpfasj" path="res://Scenes/StartButton.gd" id="5_cp0ys"]
 [ext_resource type="BitMap" uid="uid://brmeq71nf0rs3" path="res://Assets/QuitPressmask.png" id="6_m3bi6"]
 [ext_resource type="Script" uid="uid://dg1li7mco1t24" path="res://Scenes/quit.gd" id="7_wyh8j"]
-[ext_resource type="Texture2D" uid="uid://bmvqduryv6f5i" path="res://Assets/Logov2.png" id="11_t1dhk"]
+[ext_resource type="Texture2D" uid="uid://m4xwts5ncrao" path="res://Assets/logov3.png" id="11_t1dhk"]
 
 [sub_resource type="Theme" id="Theme_opfnp"]
 
