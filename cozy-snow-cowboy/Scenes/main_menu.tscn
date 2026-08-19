@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://bp0bp86tpfasj" path="res://Scenes/StartButton.gd" id="5_cp0ys"]
 [ext_resource type="BitMap" uid="uid://brmeq71nf0rs3" path="res://Assets/QuitPressmask.png" id="6_m3bi6"]
 [ext_resource type="Script" uid="uid://dg1li7mco1t24" path="res://Scenes/quit.gd" id="7_wyh8j"]
-[ext_resource type="Texture2D" uid="uid://m4xwts5ncrao" path="res://Assets/logov3.png" id="11_t1dhk"]
+[ext_resource type="Texture2D" uid="uid://icvs64x3kejg" path="res://Assets/logov4.png" id="11_t1dhk"]
 
 [sub_resource type="Theme" id="Theme_opfnp"]
 
@@ -33,7 +33,7 @@ gradient = SubResource("Gradient_yhxw7")
 particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(900, 50, 1)
-gravity = Vector3(-25, 98, 0)
+gravity = Vector3(0, 98, 0)
 scale_max = 3.6
 color_initial_ramp = SubResource("GradientTexture1D_jckax")
 alpha_curve = SubResource("CurveTexture_jckax")
@@ -43,6 +43,9 @@ turbulence_influence_min = 0.020000001
 turbulence_influence_max = 0.080000006
 collision_mode = 2
 collision_use_scale = true
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_t1dhk"]
+polygon = PackedVector2Array(14, 601, 36, 494, 85, 432, 134, 414, 329, 462, 346, 616, 486, 405, 531, 368, 597, 359, 736, 431, 792, 474, 816, 528, 813, 637, 836, 629, 864, 510, 919, 444, 992, 414, 1042, 444, 1072, 474, 1088, 495, 1099, 595, 1119, 649, -2, 633)
 
 [node name="Main menu" type="Node2D" unique_id=2027899902]
 script = ExtResource("1_28flt")
@@ -94,6 +97,42 @@ texture_click_mask = ExtResource("3_opfnp")
 stretch_mode = 3
 script = ExtResource("5_cp0ys")
 
+[node name="SnowCreator" type="GPUParticles2D" parent="Control" unique_id=864009391]
+position = Vector2(112, 113)
+scale = Vector2(0.1, 0.1)
+amount = 100
+lifetime = 10.15
+preprocess = 30.75
+visibility_rect = Rect2(-500, -100, 1500, 400)
+process_material = SubResource("ParticleProcessMaterial_trj04")
+
+[node name="SnowCreator2" type="GPUParticles2D" parent="Control" unique_id=917322263]
+position = Vector2(310, 210)
+scale = Vector2(0.12, 0.12)
+amount = 100
+lifetime = 10.15
+preprocess = 30.75
+visibility_rect = Rect2(-500, -100, 1500, 400)
+process_material = SubResource("ParticleProcessMaterial_trj04")
+
+[node name="SnowCreator3" type="GPUParticles2D" parent="Control" unique_id=150852407]
+position = Vector2(536, 133)
+scale = Vector2(0.15, 0.15)
+amount = 100
+lifetime = 10.15
+preprocess = 30.75
+visibility_rect = Rect2(-500, -100, 1500, 400)
+process_material = SubResource("ParticleProcessMaterial_trj04")
+
+[node name="SnowCreator4" type="GPUParticles2D" parent="Control" unique_id=474860464]
+position = Vector2(831, 210)
+scale = Vector2(0.3, 0.3)
+amount = 100
+lifetime = 10.15
+preprocess = 30.75
+visibility_rect = Rect2(-500, -100, 1500, 400)
+process_material = SubResource("ParticleProcessMaterial_trj04")
+
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=220964095]
 layout_mode = 0
 offset_left = 16.0
@@ -110,14 +149,8 @@ offset_right = -43.167305
 offset_bottom = -94.0
 scale = Vector2(3.2015502, 3.4849796)
 
-[node name="SnowCreator" type="GPUParticles2D" parent="." unique_id=864009391]
-position = Vector2(236, -163)
-scale = Vector2(0.99999994, 1)
-amount = 600
-lifetime = 10.15
-preprocess = 30.75
-visibility_rect = Rect2(-500, -100, 1500, 400)
-process_material = SubResource("ParticleProcessMaterial_trj04")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=293894462]
+occluder = SubResource("OccluderPolygon2D_t1dhk")
 
 [connection signal="mouse_entered" from="Control/Controls" to="Control/Controls" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Controls" to="Control/Controls" method="_on_mouse_exited"]
