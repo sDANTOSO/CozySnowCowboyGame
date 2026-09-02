@@ -4,33 +4,17 @@ extends RigidBody2D
 @onready var cryo: Node2D =$"../../Capybara"
 @onready var tree: StaticBody2D = $"../MainTree"
 
-var hey = false
+var dropped = false
 
 func _ready() -> void:
 	add_to_group("branch")
-	
+
 func hit () -> void:
-	
-	hey=true
-	branch.gravity_scale=1.0
-	cryo.hit()
-	tree.hit()
-	print("yay")
-	
-	
-	
+	dropped=true # so that dropped being true can now be checked everywhere
+	cryo.hit()#calls  hit on the cryobox
+	tree.hit()#calls hit on the main tree which changes where marsh can spawn
+
+
 func _physics_process(_delta: float) -> void:
-	if (hey == true ):
+	if (dropped == true ):#sets branches gravity
 		branch.gravity_scale = 0.5
-		
-		
-
-
-func _on_body_entered(body: Node) -> void:
-	print (body)
-	if body.is_in_group("projectile"):
-		
-		hey=true
-		branch.gravity_scale=1.0
-		print("thisishowbranch")
-	
