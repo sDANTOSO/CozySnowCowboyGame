@@ -22,6 +22,10 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 
 Global="*uid://d034hnnvl7rwi"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="CozySnowCowboy"

@@ -14,8 +14,11 @@ https://docs.google.com/presentation/d/1Qpqpyww4RMtI-we1ux8sFwqEgSNHhRhW3T4L50GA
 ## How I made my game
 My game was made with godot and the assets were made with asesprite. I mostly used tutorials for more complex mechanics like the capybara following and fourmyle riding but towards the end I found that I didn't need tutorials anymore as long as I had the godot docs about the different types of nodes I could figure it out. This was my first ever original game in godot so I was very pleased to gain autonomy in the engine towards the end.
 
+## Updates to my game
+My game now has an expanded world, a bird that flies over and can be shot down, a new menu with reactive buttons, and less bugs
+
 ## How to play my game 
-<img src="Images/gameplay.gif" alt="Gameplay" width="600" height="688">
+<img src="Images/gameplay3.gif" alt="Gameplay" width="600" height="688">
 My game can be played on Windows by running the .exe file 
 
 My game can also be played on itch (doesnt quite look as good) here:
