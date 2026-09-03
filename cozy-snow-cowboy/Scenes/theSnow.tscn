@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://cowoyl6q0227k" path="res://Assets/Cliff.png" id="6_rceaq"]
 [ext_resource type="PackedScene" uid="uid://c5vbxx7og15na" path="res://crapler.tscn" id="9_8xish"]
 [ext_resource type="PackedScene" uid="uid://8lv3mgipaqx6" path="res://birb.tscn" id="12_3odrw"]
+[ext_resource type="Texture2D" uid="uid://c80ng14mq1re0" path="res://Assets/lControls-full.png" id="13_xmh2d"]
+[ext_resource type="PackedScene" uid="uid://vkpulhv270xm" path="res://pause_menu.tscn" id="14_4g1on"]
 
 [node name="theMain" unique_id=1450038546 instance=ExtResource("1_pv3w6")]
 
@@ -38,15 +40,15 @@ position = Vector2(-719, -77)
 [node name="Capybara" parent="." index="6" unique_id=2031350376 instance=ExtResource("5_rceaq")]
 position = Vector2(330, -77)
 
-[node name="RigidBody2D" parent="Capybara" index="0"]
+[node name="RigidBody2D" parent="Capybara" index="0" unique_id=45968069]
 position = Vector2(75, 6)
 rotation = 0.5235988
 
-[node name="CryoTopHalf" parent="Capybara/RigidBody2D" index="1"]
+[node name="CryoTopHalf" parent="Capybara/RigidBody2D" index="1" unique_id=113638931]
 position = Vector2(0, 10)
 scale = Vector2(1, 1)
 
-[node name="CryoBottomHalf" parent="Capybara/RigidBody2D" index="2"]
+[node name="CryoBottomHalf" parent="Capybara/RigidBody2D" index="2" unique_id=1927918527]
 position = Vector2(-16, 2)
 scale = Vector2(1, 1)
 
@@ -77,10 +79,10 @@ polygon = PackedVector2Array(-715, -104, -706, -104, -708, -116)
 [node name="Crapler" parent="." index="8" unique_id=1127615543 instance=ExtResource("9_8xish")]
 position = Vector2(-344, 40)
 
-[node name="Maincharacter" parent="." index="9"]
+[node name="Maincharacter" parent="." index="9" unique_id=34978268]
 position = Vector2(36, 51)
 
-[node name="Camera2D" parent="Maincharacter" index="8"]
+[node name="Camera2D" parent="Maincharacter" index="8" unique_id=1749493492]
 limit_left = -780
 
 [node name="RigidBody2D" parent="." index="10" unique_id=635907953 instance=ExtResource("2_nkhhm")]
@@ -88,6 +90,19 @@ position = Vector2(-214, 53)
 
 [node name="Birb" parent="." index="11" unique_id=466185599 instance=ExtResource("12_3odrw")]
 position = Vector2(-918, -160)
+
+[node name="ControlsMenu" type="Sprite2D" parent="." index="12" unique_id=298270642]
+visible = false
+position = Vector2(-13, 266)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("13_xmh2d")
+
+[node name="PauseMenu" parent="." index="13" unique_id=7175401 instance=ExtResource("14_4g1on")]
+visible = false
+offset_left = -235.0
+offset_top = -116.0
+offset_right = -235.0
+offset_bottom = -116.0
 
 [connection signal="player_dont_flip_h" from="Fourmyle" to="Maincharacter" method="_on_fourmyle_player_dont_flip_h"]
 [connection signal="player_flip_h" from="Fourmyle" to="Maincharacter" method="_on_fourmyle_player_flip_h"]

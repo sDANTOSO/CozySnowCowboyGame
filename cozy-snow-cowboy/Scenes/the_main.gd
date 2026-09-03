@@ -8,23 +8,39 @@ var gamePaused=false
 	#for scout in get_tree().get_nodes_in_group('Scouts'):
 		#scout.connect('laserball',_on_scout_laserball)
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("pause") && gamePaused:
+	if Input.is_action_just_pressed("pause"):
+		_onpress()
+
+func _onpress():
+	
+	if gamePaused:
 		unpause()
-		gamePaused=false
-	if Input.is_action_just_pressed("pause") && gamePaused==false:
+		
+	elif gamePaused==false:
 		
 		pause()
-		gamePaused=true
+		
 
 func pause():
-	get_tree().paused = true
-	$Maincharacter/PauseMenu.show()
 	
+	
+	$ControlsMenu.show()
+	var tween = get_tree().create_tween()
+	tween.tween_property($ControlsMenu, "position", Vector2(-14,-60), 2.0)
+	await get_tree().create_timer(2.0).timeout
+	$PauseMenu.show()
+	get_tree().paused = true
+	gamePaused=true
 	
 func unpause():
-	$Maincharacter/PauseMenu.hide()
+	#Input.action_release("pause")
 	get_tree().paused=false
+	$PauseMenu.hide()
+	var tween = get_tree().create_tween()
+	tween.tween_property($ControlsMenu, "position", Vector2(-14,500), 2.0)
+	$ControlsMenu.hide()
 	
+	gamePaused=false
 
 func _on_maincharacter_laser_shot(pos: Variant, direction: Variant) -> void:
 	create_laser(pos,direction)

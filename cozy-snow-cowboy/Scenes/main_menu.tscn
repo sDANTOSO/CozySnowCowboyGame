@@ -1,19 +1,17 @@
 [gd_scene format=3 uid="uid://bjm7ois8qg6m4"]
 
 [ext_resource type="Script" uid="uid://jbnrh7rgbvy1" path="res://main_menu.gd" id="1_28flt"]
-[ext_resource type="Texture2D" uid="uid://bua7bc3yam7i1" path="res://Assets/ControlsPressed.png" id="2_t1dhk"]
+[ext_resource type="Texture2D" uid="uid://c80ng14mq1re0" path="res://Assets/lControls-full.png" id="2_t1dhk"]
 [ext_resource type="Texture2D" uid="uid://dh5bbd5bhmnwc" path="res://Assets/StartHover-export.png" id="2_yhxw7"]
 [ext_resource type="PackedScene" uid="uid://vkpulhv270xm" path="res://pause_menu.tscn" id="3_1ehe0"]
-[ext_resource type="BitMap" uid="uid://b0r6bb58cas0o" path="res://Assets/ControlsPressedmask.png" id="3_5egv6"]
 [ext_resource type="BitMap" uid="uid://csox1osh6rcm2" path="res://Assets/StartPresmask.png" id="3_opfnp"]
+[ext_resource type="BitMap" uid="uid://bue0fgfs8flgx" path="res://Assets/lControls-fullclickmaskl.png" id="3_t1dhk"]
 [ext_resource type="Script" uid="uid://o0wavqx31wi3" path="res://Scenes/controls.gd" id="4_vtepg"]
 [ext_resource type="Texture2D" uid="uid://hrcg1qjdvexa" path="res://Assets/QuitPress.png" id="5_8dnnj"]
 [ext_resource type="Script" uid="uid://bp0bp86tpfasj" path="res://Scenes/StartButton.gd" id="5_cp0ys"]
 [ext_resource type="BitMap" uid="uid://brmeq71nf0rs3" path="res://Assets/QuitPressmask.png" id="6_m3bi6"]
 [ext_resource type="Script" uid="uid://dg1li7mco1t24" path="res://Scenes/quit.gd" id="7_wyh8j"]
 [ext_resource type="Texture2D" uid="uid://icvs64x3kejg" path="res://Assets/logov4.png" id="11_t1dhk"]
-
-[sub_resource type="Theme" id="Theme_opfnp"]
 
 [sub_resource type="Curve" id="Curve_cp0ys"]
 _data = [Vector2(0.019943021, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.6701674, 0.0, 0, 0]
@@ -44,8 +42,10 @@ turbulence_influence_max = 0.080000006
 collision_mode = 2
 collision_use_scale = true
 
+[sub_resource type="Theme" id="Theme_opfnp"]
+
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_t1dhk"]
-polygon = PackedVector2Array(14, 601, 36, 494, 85, 432, 134, 414, 329, 462, 346, 616, 486, 405, 531, 368, 597, 359, 736, 431, 792, 474, 816, 528, 813, 637, 836, 629, 864, 510, 919, 444, 992, 414, 1042, 444, 1072, 474, 1088, 495, 1099, 595, 1119, 649, -2, 633)
+polygon = PackedVector2Array(61, 527, 112, 461, 133, 441, 196, 431, 370, 487, 378, 564, 486, 405, 531, 368, 597, 359, 736, 431, 792, 474, 816, 528, 813, 637, 836, 629, 864, 510, 919, 444, 992, 414, 1042, 444, 1072, 474, 1088, 495, 1099, 595, 1119, 649, 36, 646)
 
 [node name="Main menu" type="Node2D" unique_id=2027899902]
 script = ExtResource("1_28flt")
@@ -63,61 +63,9 @@ offset_right = 1154.0
 offset_bottom = 659.0
 color = Color(0.549471, 0.6922099, 0.73450315, 1)
 
-[node name="Controls" type="TextureButton" parent="Control" unique_id=44892592]
-layout_mode = 0
-offset_left = -83.0
-offset_top = 352.0
-offset_right = 877.0
-offset_bottom = 1120.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("2_t1dhk")
-texture_click_mask = ExtResource("3_5egv6")
-script = ExtResource("4_vtepg")
-
-[node name="Quit" type="TextureButton" parent="Control" unique_id=2065805460]
-layout_mode = 0
-offset_left = 752.0
-offset_top = 379.0
-offset_right = 1707.0
-offset_bottom = 1142.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("5_8dnnj")
-texture_click_mask = ExtResource("6_m3bi6")
-script = ExtResource("7_wyh8j")
-
-[node name="StartButton" type="TextureButton" parent="Control" unique_id=664113724]
-layout_mode = 0
-offset_left = 173.0
-offset_top = 133.0
-offset_right = 1005.0
-offset_bottom = 901.0
-theme = SubResource("Theme_opfnp")
-texture_normal = ExtResource("2_yhxw7")
-texture_click_mask = ExtResource("3_opfnp")
-stretch_mode = 3
-script = ExtResource("5_cp0ys")
-
-[node name="SnowCreator" type="GPUParticles2D" parent="Control" unique_id=864009391]
-position = Vector2(112, 113)
-scale = Vector2(0.1, 0.1)
-amount = 100
-lifetime = 10.15
-preprocess = 30.75
-visibility_rect = Rect2(-500, -100, 1500, 400)
-process_material = SubResource("ParticleProcessMaterial_trj04")
-
 [node name="SnowCreator2" type="GPUParticles2D" parent="Control" unique_id=917322263]
 position = Vector2(310, 210)
-scale = Vector2(0.12, 0.12)
-amount = 100
-lifetime = 10.15
-preprocess = 30.75
-visibility_rect = Rect2(-500, -100, 1500, 400)
-process_material = SubResource("ParticleProcessMaterial_trj04")
-
-[node name="SnowCreator3" type="GPUParticles2D" parent="Control" unique_id=150852407]
-position = Vector2(536, 133)
-scale = Vector2(0.15, 0.15)
+scale = Vector2(0.11999998, 0.11999998)
 amount = 100
 lifetime = 10.15
 preprocess = 30.75
@@ -133,34 +81,91 @@ preprocess = 30.75
 visibility_rect = Rect2(-500, -100, 1500, 400)
 process_material = SubResource("ParticleProcessMaterial_trj04")
 
+[node name="SnowCreator3" type="GPUParticles2D" parent="Control" unique_id=150852407]
+position = Vector2(536, 132.99998)
+scale = Vector2(0.15, 0.15)
+amount = 100
+lifetime = 10.15
+preprocess = 30.75
+visibility_rect = Rect2(-500, -100, 1500, 400)
+process_material = SubResource("ParticleProcessMaterial_trj04")
+
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=220964095]
 layout_mode = 0
 offset_left = 16.0
 offset_right = 1150.0
-offset_bottom = 235.0
+offset_bottom = 256.0
 texture = ExtResource("11_t1dhk")
+
+[node name="SnowCreator" type="GPUParticles2D" parent="Control" unique_id=864009391]
+position = Vector2(112, 113)
+scale = Vector2(0.1, 0.1)
+amount = 100
+lifetime = 10.15
+preprocess = 30.75
+visibility_rect = Rect2(-500, -100, 1500, 400)
+process_material = SubResource("ParticleProcessMaterial_trj04")
+
+[node name="StartButton" type="TextureButton" parent="Control" unique_id=664113724]
+layout_mode = 0
+offset_left = 173.0
+offset_top = 133.0
+offset_right = 1005.0
+offset_bottom = 901.0
+theme = SubResource("Theme_opfnp")
+texture_normal = ExtResource("2_yhxw7")
+texture_click_mask = ExtResource("3_opfnp")
+stretch_mode = 3
+script = ExtResource("5_cp0ys")
+
+[node name="Controls" type="TextureButton" parent="Control" unique_id=44892592]
+layout_mode = 0
+offset_top = 414.0
+offset_right = 1920.0
+offset_bottom = 2014.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_t1dhk")
+texture_click_mask = ExtResource("3_t1dhk")
+script = ExtResource("4_vtepg")
+
+[node name="Quit" type="TextureButton" parent="Control" unique_id=2065805460]
+layout_mode = 0
+offset_left = 752.0
+offset_top = 379.0
+offset_right = 1707.0
+offset_bottom = 1142.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_8dnnj")
+texture_click_mask = ExtResource("6_m3bi6")
+script = ExtResource("7_wyh8j")
 
 [node name="PauseMenu" parent="Control" unique_id=940990709 instance=ExtResource("3_1ehe0")]
 visible = false
 layout_mode = 0
-offset_left = -83.00001
+offset_left = -83.0
 offset_top = -94.0
-offset_right = -43.167305
+offset_right = -43.167236
 offset_bottom = -94.0
 scale = Vector2(3.2015502, 3.4849796)
+
+[node name="Button" parent="Control/PauseMenu" index="1" unique_id=1449515953]
+offset_left = 156.79904
+offset_top = 200.00116
+offset_right = 239.79904
+offset_bottom = 231.00116
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=293894462]
 occluder = SubResource("OccluderPolygon2D_t1dhk")
 
+[connection signal="mouse_entered" from="Control/StartButton" to="Control/StartButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/StartButton" to="Control/StartButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/StartButton" to="Control/StartButton" method="_on_pressed"]
 [connection signal="mouse_entered" from="Control/Controls" to="Control/Controls" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Controls" to="Control/Controls" method="_on_mouse_exited"]
 [connection signal="pressed" from="Control/Controls" to="Control/Controls" method="_on_pressed"]
 [connection signal="mouse_entered" from="Control/Quit" to="Control/Quit" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Quit" to="Control/Quit" method="_on_mouse_exited"]
 [connection signal="pressed" from="Control/Quit" to="Control/Quit" method="_on_pressed"]
-[connection signal="mouse_entered" from="Control/StartButton" to="Control/StartButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Control/StartButton" to="Control/StartButton" method="_on_mouse_exited"]
-[connection signal="pressed" from="Control/StartButton" to="Control/StartButton" method="_on_pressed"]
 [connection signal="pressed" from="Control/PauseMenu/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/PauseMenu/Button2" to="." method="_on_button_2_pressed"]
 
