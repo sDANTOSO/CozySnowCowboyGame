@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://8lv3mgipaqx6" path="res://birb.tscn" id="12_3odrw"]
 [ext_resource type="Texture2D" uid="uid://c80ng14mq1re0" path="res://Assets/lControls-full.png" id="13_xmh2d"]
 [ext_resource type="PackedScene" uid="uid://vkpulhv270xm" path="res://pause_menu.tscn" id="14_4g1on"]
+[ext_resource type="Script" uid="uid://c1pw5xui00siv" path="res://Scripts/avalanche.gd" id="15_verem"]
 
 [node name="theMain" instance=ExtResource("1_pv3w6")]
 
@@ -104,9 +105,35 @@ offset_top = -116.0
 offset_right = -235.0
 offset_bottom = -116.0
 
+[node name="StartPoint" type="Node2D" parent="." index="14" unique_id=1149271942]
+script = ExtResource("15_verem")
+
+[node name="Marker2D" type="Marker2D" parent="StartPoint" index="0" unique_id=1920209205]
+position = Vector2(-748, -138)
+
+[node name="Marker2D2" type="Marker2D" parent="StartPoint" index="1" unique_id=28767759]
+position = Vector2(-744, -119)
+
+[node name="Marker2D3" type="Marker2D" parent="StartPoint" index="2" unique_id=863780460]
+position = Vector2(-759, -152)
+
+[node name="Marker2D4" type="Marker2D" parent="StartPoint" index="3" unique_id=697844388]
+position = Vector2(-760, -130)
+
+[node name="Marker2D5" type="Marker2D" parent="StartPoint" index="4" unique_id=469314620]
+position = Vector2(-747, -153)
+
+[node name="Marker2D6" type="Marker2D" parent="StartPoint" index="5" unique_id=276492596]
+position = Vector2(-760, -108)
+
+[node name="Timer" type="Timer" parent="." index="15" unique_id=802847894]
+wait_time = 0.5
+
 [connection signal="player_dont_flip_h" from="Fourmyle" to="Maincharacter" method="_on_fourmyle_player_dont_flip_h"]
 [connection signal="player_flip_h" from="Fourmyle" to="Maincharacter" method="_on_fourmyle_player_flip_h"]
 [connection signal="marshdropped" from="Tree/MainTree" to="." method="_on_main_tree_marshdropped"]
+[connection signal="avalanchestart" from="StartPoint" to="StartPoint" method="_on_avalanchestart"]
+[connection signal="timeout" from="Timer" to="StartPoint" method="_on_timer_timeout"]
 
 [editable path="Tree"]
 [editable path="Capybara"]

@@ -115,5 +115,5 @@ wait_time = 0.9
 [connection signal="boxdropped" from="." to="RigidBody2D" method="_on_capybara_boxdropped"]
 [connection signal="timeout" from="RigidBody2D/Timer" to="RigidBody2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="RigidBody2D/Timer2" to="." method="_on_timer_2_timeout"]
-[connection signal="timeout" from="RigidBody2D/Timer2" to="RigidBody2D" method="_on_timer_2_timeout"]
 [connection signal="timeout" from="RigidBody2D/Timer2" to="RigidBody2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="RigidBody2D/Timer2" to="RigidBody2D" method="_on_timer_2_timeout"]
