@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ba46857hx57bh"]
+[gd_scene load_steps=15 format=3 uid="uid://ba46857hx57bh"]
 
 [ext_resource type="PackedScene" uid="uid://bua6thnyrktmw" path="res://Scenes/the_main.tscn" id="1_pv3w6"]
 [ext_resource type="PackedScene" uid="uid://dgj5najb6c1qp" path="res://Scenes/the_snow.tscn" id="2_3v7dj"]
@@ -15,44 +15,44 @@
 [ext_resource type="Texture2D" uid="uid://c80ng14mq1re0" path="res://Assets/lControls-full.png" id="13_xmh2d"]
 [ext_resource type="PackedScene" uid="uid://vkpulhv270xm" path="res://pause_menu.tscn" id="14_4g1on"]
 
-[node name="theMain" unique_id=1450038546 instance=ExtResource("1_pv3w6")]
+[node name="theMain" instance=ExtResource("1_pv3w6")]
 
-[node name="The snow" parent="." index="0" unique_id=1229778543 instance=ExtResource("2_3v7dj")]
+[node name="The snow" parent="." index="0" instance=ExtResource("2_3v7dj")]
 position = Vector2(68, 10)
 
-[node name="Firebush" parent="The snow" index="6" unique_id=1119140886 instance=ExtResource("3_r4wjs")]
+[node name="Firebush" parent="The snow" index="6" instance=ExtResource("3_r4wjs")]
 position = Vector2(87, 68)
 
-[node name="Fourmyle" parent="." index="3" unique_id=1515156760 instance=ExtResource("3_3v7dj")]
+[node name="Fourmyle" parent="." index="3" instance=ExtResource("3_3v7dj")]
 position = Vector2(-138, 28)
 collision_mask = 575
 
-[node name="Tree" parent="." index="4" unique_id=187814113 instance=ExtResource("4_1jrh8")]
+[node name="Tree" parent="." index="4" instance=ExtResource("4_1jrh8")]
 position = Vector2(330, -77)
 
-[node name="RemoteTransform2D" parent="Tree/TreeBranch" parent_id_path=PackedInt32Array(187814113, 51675635) index="4" unique_id=2012324269]
+[node name="RemoteTransform2D" parent="Tree/TreeBranch" index="4"]
 remote_path = NodePath("../../../Capybara")
 update_rotation = false
 
-[node name="Blobfish" parent="." index="5" unique_id=2110846823 instance=ExtResource("5_s8ngn")]
+[node name="Blobfish" parent="." index="5" instance=ExtResource("5_s8ngn")]
 position = Vector2(-719, -77)
 
-[node name="Capybara" parent="." index="6" unique_id=2031350376 instance=ExtResource("5_rceaq")]
+[node name="Capybara" parent="." index="6" instance=ExtResource("5_rceaq")]
 position = Vector2(330, -77)
 
-[node name="RigidBody2D" parent="Capybara" index="0" unique_id=45968069]
+[node name="RigidBody2D" parent="Capybara" index="0"]
 position = Vector2(75, 6)
 rotation = 0.5235988
 
-[node name="CryoTopHalf" parent="Capybara/RigidBody2D" index="1" unique_id=113638931]
+[node name="CryoTopHalf" parent="Capybara/RigidBody2D" index="1"]
 position = Vector2(0, 10)
 scale = Vector2(1, 1)
 
-[node name="CryoBottomHalf" parent="Capybara/RigidBody2D" index="2" unique_id=1927918527]
+[node name="CryoBottomHalf" parent="Capybara/RigidBody2D" index="2"]
 position = Vector2(-16, 2)
 scale = Vector2(1, 1)
 
-[node name="Unstable" type="RigidBody2D" parent="." index="7" unique_id=875871837]
+[node name="Unstable" type="RigidBody2D" parent="." index="7"]
 position = Vector2(314, 50)
 collision_layer = 96
 collision_mask = 545
@@ -62,42 +62,42 @@ center_of_mass_mode = 1
 center_of_mass = Vector2(-696, -112)
 script = ExtResource("6_g2qjc")
 
-[node name="Cliff" type="Sprite2D" parent="Unstable" index="0" unique_id=1767438472]
+[node name="Cliff" type="Sprite2D" parent="Unstable" index="0"]
 position = Vector2(-1030, -111)
 texture = ExtResource("6_rceaq")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable" index="1" unique_id=33390685]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable" index="1"]
 position = Vector2(-656, -119)
 polygon = PackedVector2Array(-385, 2, -373, 1, -369, 6, -373, 11, -376, 8, -383, 14)
 
-[node name="Area2D" type="Area2D" parent="Unstable" index="2" unique_id=1601639588]
+[node name="Area2D" type="Area2D" parent="Unstable" index="2"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable/Area2D" index="0" unique_id=1022136111]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable/Area2D" index="0"]
 position = Vector2(-333, -1)
 polygon = PackedVector2Array(-715, -104, -706, -104, -708, -116)
 
-[node name="Crapler" parent="." index="8" unique_id=1127615543 instance=ExtResource("9_8xish")]
+[node name="Crapler" parent="." index="8" instance=ExtResource("9_8xish")]
 position = Vector2(-344, 40)
 
-[node name="Maincharacter" parent="." index="9" unique_id=34978268]
+[node name="Maincharacter" parent="." index="9"]
 position = Vector2(36, 51)
 
-[node name="Camera2D" parent="Maincharacter" index="8" unique_id=1749493492]
+[node name="Camera2D" parent="Maincharacter" index="8"]
 limit_left = -780
 
-[node name="RigidBody2D" parent="." index="10" unique_id=635907953 instance=ExtResource("2_nkhhm")]
+[node name="RigidBody2D" parent="." index="10" instance=ExtResource("2_nkhhm")]
 position = Vector2(-214, 53)
 
-[node name="Birb" parent="." index="11" unique_id=466185599 instance=ExtResource("12_3odrw")]
+[node name="Birb" parent="." index="11" instance=ExtResource("12_3odrw")]
 position = Vector2(-918, -160)
 
-[node name="ControlsMenu" type="Sprite2D" parent="." index="12" unique_id=298270642]
+[node name="ControlsMenu" type="Sprite2D" parent="." index="12"]
 visible = false
 position = Vector2(-13, 266)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("13_xmh2d")
 
-[node name="PauseMenu" parent="." index="13" unique_id=7175401 instance=ExtResource("14_4g1on")]
+[node name="PauseMenu" parent="." index="13" instance=ExtResource("14_4g1on")]
 visible = false
 offset_left = -235.0
 offset_top = -116.0

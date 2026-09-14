@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnn8myw1yradv"]
+
+[ext_resource type="Texture2D" uid="uid://d268oj5ptdlkc" path="res://Assets/seamless-pixelated-snow-texture-mapping-background-wallpaper-various-digital-applications-seamless-pixelated-snow-texture-115261436.webp" id="1_5fec0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xellr"]
+size = Vector2(51, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfydk"]
+size = Vector2(80, 73)
+
+[node name="FallingRock" type="Node2D"]
+
+[node name="SeamlessPixelatedSnowTextureMappingBackgroundWallpaperVariousDigitalApplicationsSeamlessPixelatedSnowTexture115261436" type="Sprite2D" parent="."]
+position = Vector2(1, 3)
+scale = Vector2(0.060000002, -0.065)
+texture = ExtResource("1_5fec0")
+
+[node name="Snowarea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snowarea"]
+position = Vector2(2.5, 9)
+shape = SubResource("RectangleShape2D_xellr")
+
+[node name="killbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killbox"]
+position = Vector2(4, 11)
+shape = SubResource("RectangleShape2D_hfydk")
+
+[node name="SelfDestructTimer" type="Timer" parent="."]

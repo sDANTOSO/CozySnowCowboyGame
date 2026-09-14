@@ -20,11 +20,10 @@ func _on_timer_timeout() -> void:
 	marsh_spawns = group.get_children()
 	
 	if branch_fell==true:
-		print("branch is broken")
 		spawnamount= marsh_spawns.size
 	
 	var selected_laser = marsh_spawns[randi() % marsh_spawns.size()]
 	marshdropped.emit(selected_laser.global_position)
 	
 	timer.start()
-	pass # Replace with function body.
+	
