@@ -1,7 +1,7 @@
 extends RigidBody2D
 @onready var branch: RigidBody2D =$"."
 var hey = false
-
+signal avalanchestart
 func _ready() -> void:
 	add_to_group("branch")
 	
@@ -17,5 +17,5 @@ func _physics_process(_delta: float) -> void:
 		print()
 		#branch.gravity_scale = 2
 func avalanche()-> void:
+	avalanchestart.emit()
 	
-	pass

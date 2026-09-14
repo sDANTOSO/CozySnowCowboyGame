@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ba46857hx57bh"]
+[gd_scene format=3 uid="uid://ba46857hx57bh"]
 
 [ext_resource type="PackedScene" uid="uid://bua6thnyrktmw" path="res://Scenes/the_main.tscn" id="1_pv3w6"]
 [ext_resource type="PackedScene" uid="uid://dgj5najb6c1qp" path="res://Scenes/the_snow.tscn" id="2_3v7dj"]
@@ -16,89 +16,89 @@
 [ext_resource type="PackedScene" uid="uid://vkpulhv270xm" path="res://pause_menu.tscn" id="14_4g1on"]
 [ext_resource type="Script" uid="uid://c1pw5xui00siv" path="res://Scripts/avalanche.gd" id="15_verem"]
 
-[node name="theMain" instance=ExtResource("1_pv3w6")]
+[node name="theMain" unique_id=142701809 instance=ExtResource("1_pv3w6")]
 
-[node name="The snow" parent="." index="0" instance=ExtResource("2_3v7dj")]
+[node name="The snow" parent="." index="0" unique_id=1234375215 instance=ExtResource("2_3v7dj")]
 position = Vector2(68, 10)
 
-[node name="Firebush" parent="The snow" index="6" instance=ExtResource("3_r4wjs")]
+[node name="Firebush" parent="The snow" index="6" unique_id=958938590 instance=ExtResource("3_r4wjs")]
 position = Vector2(87, 68)
 
-[node name="Fourmyle" parent="." index="3" instance=ExtResource("3_3v7dj")]
+[node name="Fourmyle" parent="." index="3" unique_id=1229818414 instance=ExtResource("3_3v7dj")]
 position = Vector2(-138, 28)
 collision_mask = 575
 
-[node name="Tree" parent="." index="4" instance=ExtResource("4_1jrh8")]
+[node name="Tree" parent="." index="4" unique_id=660711873 instance=ExtResource("4_1jrh8")]
 position = Vector2(330, -77)
 
-[node name="RemoteTransform2D" parent="Tree/TreeBranch" index="4"]
+[node name="RemoteTransform2D" parent="Tree/TreeBranch" parent_id_path=PackedInt32Array(660711873, 51675635) index="4" unique_id=2012324269]
 remote_path = NodePath("../../../Capybara")
 update_rotation = false
 
-[node name="Blobfish" parent="." index="5" instance=ExtResource("5_s8ngn")]
+[node name="Blobfish" parent="." index="5" unique_id=1431083995 instance=ExtResource("5_s8ngn")]
 position = Vector2(-719, -77)
 
-[node name="Capybara" parent="." index="6" instance=ExtResource("5_rceaq")]
+[node name="Capybara" parent="." index="6" unique_id=1096202687 instance=ExtResource("5_rceaq")]
 position = Vector2(330, -77)
 
-[node name="RigidBody2D" parent="Capybara" index="0"]
+[node name="RigidBody2D" parent="Capybara" index="0" unique_id=45968069]
 position = Vector2(75, 6)
 rotation = 0.5235988
 
-[node name="CryoTopHalf" parent="Capybara/RigidBody2D" index="1"]
+[node name="CryoTopHalf" parent="Capybara/RigidBody2D" index="1" unique_id=113638931]
 position = Vector2(0, 10)
 scale = Vector2(1, 1)
 
-[node name="CryoBottomHalf" parent="Capybara/RigidBody2D" index="2"]
+[node name="CryoBottomHalf" parent="Capybara/RigidBody2D" index="2" unique_id=1927918527]
 position = Vector2(-16, 2)
 scale = Vector2(1, 1)
 
-[node name="Unstable" type="RigidBody2D" parent="." index="7"]
+[node name="Unstable" type="RigidBody2D" parent="." index="7" unique_id=1052270452]
 position = Vector2(314, 50)
 collision_layer = 96
 collision_mask = 545
-mass = 5.018
+mass = 20.0
 gravity_scale = 0.0
 center_of_mass_mode = 1
 center_of_mass = Vector2(-696, -112)
 script = ExtResource("6_g2qjc")
 
-[node name="Cliff" type="Sprite2D" parent="Unstable" index="0"]
+[node name="Cliff" type="Sprite2D" parent="Unstable" index="0" unique_id=1242365827]
 position = Vector2(-1030, -111)
 texture = ExtResource("6_rceaq")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable" index="1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable" index="1" unique_id=2027665267]
 position = Vector2(-656, -119)
 polygon = PackedVector2Array(-385, 2, -373, 1, -369, 6, -373, 11, -376, 8, -383, 14)
 
-[node name="Area2D" type="Area2D" parent="Unstable" index="2"]
+[node name="Area2D" type="Area2D" parent="Unstable" index="2" unique_id=680139027]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable/Area2D" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Unstable/Area2D" index="0" unique_id=1626942070]
 position = Vector2(-333, -1)
 polygon = PackedVector2Array(-715, -104, -706, -104, -708, -116)
 
-[node name="Crapler" parent="." index="8" instance=ExtResource("9_8xish")]
+[node name="Crapler" parent="." index="8" unique_id=1302142514 instance=ExtResource("9_8xish")]
 position = Vector2(-344, 40)
 
-[node name="Maincharacter" parent="." index="9"]
+[node name="Maincharacter" parent="." index="9" unique_id=34978268]
 position = Vector2(36, 51)
 
-[node name="Camera2D" parent="Maincharacter" index="8"]
+[node name="Camera2D" parent="Maincharacter" index="8" unique_id=1749493492]
 limit_left = -780
 
-[node name="RigidBody2D" parent="." index="10" instance=ExtResource("2_nkhhm")]
+[node name="RigidBody2D" parent="." index="10" unique_id=1646810553 instance=ExtResource("2_nkhhm")]
 position = Vector2(-214, 53)
 
-[node name="Birb" parent="." index="11" instance=ExtResource("12_3odrw")]
+[node name="Birb" parent="." index="11" unique_id=401413325 instance=ExtResource("12_3odrw")]
 position = Vector2(-918, -160)
 
-[node name="ControlsMenu" type="Sprite2D" parent="." index="12"]
+[node name="ControlsMenu" type="Sprite2D" parent="." index="12" unique_id=1707898576]
 visible = false
 position = Vector2(-13, 266)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("13_xmh2d")
 
-[node name="PauseMenu" parent="." index="13" instance=ExtResource("14_4g1on")]
+[node name="PauseMenu" parent="." index="13" unique_id=605902186 instance=ExtResource("14_4g1on")]
 visible = false
 offset_left = -235.0
 offset_top = -116.0
@@ -109,31 +109,68 @@ offset_bottom = -116.0
 script = ExtResource("15_verem")
 
 [node name="Marker2D" type="Marker2D" parent="StartPoint" index="0" unique_id=1920209205]
-position = Vector2(-748, -138)
+position = Vector2(-855, -247)
 
 [node name="Marker2D2" type="Marker2D" parent="StartPoint" index="1" unique_id=28767759]
-position = Vector2(-744, -119)
+position = Vector2(-845, -260)
 
 [node name="Marker2D3" type="Marker2D" parent="StartPoint" index="2" unique_id=863780460]
-position = Vector2(-759, -152)
+position = Vector2(-839, -234)
 
 [node name="Marker2D4" type="Marker2D" parent="StartPoint" index="3" unique_id=697844388]
-position = Vector2(-760, -130)
+position = Vector2(-861, -268)
 
 [node name="Marker2D5" type="Marker2D" parent="StartPoint" index="4" unique_id=469314620]
-position = Vector2(-747, -153)
+position = Vector2(-828, -223)
 
 [node name="Marker2D6" type="Marker2D" parent="StartPoint" index="5" unique_id=276492596]
-position = Vector2(-760, -108)
+position = Vector2(-823, -214)
+
+[node name="Marker2D7" type="Marker2D" parent="StartPoint" index="6" unique_id=669409995]
+position = Vector2(-837, -251)
+
+[node name="Marker2D8" type="Marker2D" parent="StartPoint" index="7" unique_id=1744192681]
+position = Vector2(-850, -277)
+
+[node name="Marker2D9" type="Marker2D" parent="StartPoint" index="8" unique_id=613354018]
+position = Vector2(-865, -290)
+
+[node name="Marker2D10" type="Marker2D" parent="StartPoint" index="9" unique_id=1786458729]
+position = Vector2(-829, -243)
+
+[node name="Marker2D11" type="Marker2D" parent="StartPoint" index="10" unique_id=829557095]
+position = Vector2(-820, -166)
+
+[node name="Marker2D12" type="Marker2D" parent="StartPoint" index="11" unique_id=1541916119]
+position = Vector2(-801, -131)
+
+[node name="Marker2D13" type="Marker2D" parent="StartPoint" index="12" unique_id=2052735487]
+position = Vector2(-777, -98)
+
+[node name="Marker2D14" type="Marker2D" parent="StartPoint" index="13" unique_id=1058843084]
+position = Vector2(-816, -198)
+
+[node name="Marker2D15" type="Marker2D" parent="StartPoint" index="14" unique_id=314290117]
+position = Vector2(-821, -234)
+
+[node name="Marker2D16" type="Marker2D" parent="StartPoint" index="15" unique_id=132291683]
+position = Vector2(-840, -269)
+
+[node name="Marker2D17" type="Marker2D" parent="StartPoint" index="16" unique_id=1540754667]
+position = Vector2(-861, -255)
 
 [node name="Timer" type="Timer" parent="." index="15" unique_id=802847894]
-wait_time = 0.5
+
+[node name="Timer2" type="Timer" parent="." index="16" unique_id=1748293337]
+wait_time = 15.0
 
 [connection signal="player_dont_flip_h" from="Fourmyle" to="Maincharacter" method="_on_fourmyle_player_dont_flip_h"]
 [connection signal="player_flip_h" from="Fourmyle" to="Maincharacter" method="_on_fourmyle_player_flip_h"]
 [connection signal="marshdropped" from="Tree/MainTree" to="." method="_on_main_tree_marshdropped"]
+[connection signal="avalanchestart" from="Unstable" to="StartPoint" method="_on_unstable_avalanchestart"]
 [connection signal="avalanchestart" from="StartPoint" to="StartPoint" method="_on_avalanchestart"]
 [connection signal="timeout" from="Timer" to="StartPoint" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="StartPoint" method="_on_timer_2_timeout"]
 
 [editable path="Tree"]
 [editable path="Capybara"]

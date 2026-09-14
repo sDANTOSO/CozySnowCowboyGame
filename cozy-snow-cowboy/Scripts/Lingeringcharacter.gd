@@ -29,7 +29,8 @@ var candraw =false
 func _ready() -> void:
 	add_to_group("player")
 	sprite.play("default")
-	#print(sprite.h)
+	$Camera2D.limit_left = -850
+	print($Camera2D.limit_left)
 
 func _physics_process(delta: float) -> void:
 	collision_shape_2d.disabled = not inUse#disables collison if we dont control the player

@@ -3,17 +3,19 @@ var snowball_scene = preload("res://snowball.tscn")
 @onready var group: Node2D=$"."
 signal avalanchestart(pos)
 var avalanche_droppoints
-func _ready() -> void:
-	$"../Timer".start()
+var run = true;
+#func _ready() -> void:
+	#$"../Timer".start()
 
 func _on_timer_timeout() -> void:
-	
-		#var laser = snowball_scene.instantiate()
-		avalanche_droppoints = group.get_children()
-		var coordinates = avalanche_droppoints[randi() % avalanche_droppoints.size()]
-		avalanchestart.emit(coordinates.global_position)
-		print(coordinates.global_position)
-		$"../Timer".start()
+		
+		while run == true:
+			#var laser = snowball_scene.instantiate()
+			avalanche_droppoints = group.get_children()
+			var coordinates = avalanche_droppoints[randi() % avalanche_droppoints.size()]
+			avalanchestart.emit(coordinates.global_position)
+		
+		
 		
 	
 
@@ -28,3 +30,15 @@ func create_snow(pos):
 	add_child(snowball)
 	##$Snowballs.add_child(snowball)
 	#snowball.add_to_group("Snowball")
+
+
+func _on_unstable_avalanchestart() -> void:
+	avalanche_droppoints = group.get_children()
+	var coordinates = avalanche_droppoints[randi() % avalanche_droppoints.size()]
+	avalanchestart.emit(coordinates.global_position)
+	$"../Timer".start()
+	$"../Timer2".start()
+
+func _on_timer_2_timeout() -> void:
+	run= false;
+	
