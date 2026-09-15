@@ -160,6 +160,7 @@ position = Vector2(-840, -269)
 position = Vector2(-861, -255)
 
 [node name="Timer" type="Timer" parent="." index="15" unique_id=802847894]
+wait_time = 0.009999999999999998
 
 [node name="Timer2" type="Timer" parent="." index="16" unique_id=1748293337]
 wait_time = 15.0

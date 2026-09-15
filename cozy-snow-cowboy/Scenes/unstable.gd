@@ -13,9 +13,10 @@ func hit () -> void:
 	avalanche()
 	
 func _physics_process(_delta: float) -> void:
-	if (hey == true ):
-		print()
+	#if (hey == true ):
+		#print()
 		#branch.gravity_scale = 2
+		pass
 func avalanche()-> void:
 	avalanchestart.emit()
 	

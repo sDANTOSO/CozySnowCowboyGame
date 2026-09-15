@@ -4,10 +4,8 @@ extends Node2D
 var laserball_scene = preload("res://Scenes/laserball.tscn")
 var marsh_scene = preload("res://MarshDrops.tscn")
 var gamePaused=false 
-#func _ready() -> void:
-	#for scout in get_tree().get_nodes_in_group('Scouts'):
-		#scout.connect('laserball',_on_scout_laserball)
-func _process(delta: float) -> void:
+
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		_onpress()
 

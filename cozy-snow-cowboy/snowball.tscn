@@ -7,15 +7,13 @@
 radius = 5.62
 
 [node name="snowball" type="RigidBody2D" unique_id=1773097088]
-collision_layer = 2
-collision_mask = 47
-gravity_scale = 5.0
+collision_layer = 4
+collision_mask = 575
 script = ExtResource("1_i8p5v")
 
 [node name="Snowball" type="Sprite2D" parent="." unique_id=804044594]
-position = Vector2(-1, 31)
 texture = ExtResource("1_srvs4")
+offset = Vector2(-1, 15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1010190410]
-position = Vector2(0, 16)
 shape = SubResource("CircleShape2D_ilkqt")

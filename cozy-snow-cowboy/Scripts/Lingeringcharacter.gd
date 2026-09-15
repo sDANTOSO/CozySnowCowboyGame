@@ -30,7 +30,7 @@ func _ready() -> void:
 	add_to_group("player")
 	sprite.play("default")
 	$Camera2D.limit_left = -850
-	print($Camera2D.limit_left)
+	
 
 func _physics_process(delta: float) -> void:
 	collision_shape_2d.disabled = not inUse#disables collison if we dont control the player
@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 		sprite.play("default")
 		currentani ="default"
 		return
-	# Add the gravity.
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
@@ -47,8 +47,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	
 	var direction := Input.get_axis("left", "right")
 	direction1 = Input.get_vector("left", "right","up","down")
 	if direction :
@@ -63,7 +62,7 @@ func _physics_process(delta: float) -> void:
 func _process(_delta: float) -> void:
 	
 	if Input.is_action_just_pressed("Grab") :
-		#if bodyinzone.is_in_group("Grabbable"):
+		
 		if (inzone ||  gotagun):
 			bodyinzone.kill()
 		
@@ -76,7 +75,7 @@ func _process(_delta: float) -> void:
 		sprite.play("Toasting")
 		if meltingmallow==true:
 			sprite.play("melting")
-			print("meltign")
+			
 		toasting=true
 		currentani ="default"
 	else: if Input.is_action_just_pressed("roast")&&canroast ==true && toasting == true:
@@ -92,7 +91,6 @@ func _process(_delta: float) -> void:
 		sprite.play("default")
 		weaponout=false
 		
-	#var animation_state = get animation_state()
 	
 	if currentani != "Shoot":
 			weaponout=false
@@ -118,26 +116,16 @@ func update_facing_direction()  :
 
 func _on_lasercooldown_timeout() -> void:
 	can_laser=true
-	pass # Replace with function body.
-
-
-
+	
 func _on_fourmyle_player_dont_flip_h() -> void:
 	sprite.flip_h=false
-	pass # Replace with function body.
-
-
+	
 func _on_fourmyle_player_flip_h() -> void:
 	sprite.flip_h=true
-	pass # Replace with function body.
-
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
 	
-	#print(body.name)
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Marsh"):
 		inzone=true
-		#print("nodeinside")
 		bodyinzone=body
 		
 	if body.is_in_group("Campfire"):
@@ -157,4 +145,3 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		
 	if body.is_in_group("Weapon"):
 		gotagun=false
-		#bodyinzone=body
