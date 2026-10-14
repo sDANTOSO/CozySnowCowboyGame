@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bjm7ois8qg6m4"]
+[gd_scene load_steps=20 format=3 uid="uid://bjm7ois8qg6m4"]
 
 [ext_resource type="Script" uid="uid://jbnrh7rgbvy1" path="res://main_menu.gd" id="1_28flt"]
 [ext_resource type="Texture2D" uid="uid://c80ng14mq1re0" path="res://Assets/lControls-full.png" id="2_t1dhk"]
@@ -47,23 +47,23 @@ collision_use_scale = true
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_t1dhk"]
 polygon = PackedVector2Array(61, 527, 112, 461, 133, 441, 196, 431, 370, 487, 378, 564, 486, 405, 531, 368, 597, 359, 736, 431, 792, 474, 816, 528, 813, 637, 836, 629, 864, 510, 919, 444, 992, 414, 1042, 444, 1072, 474, 1088, 495, 1099, 595, 1119, 649, 36, 646)
 
-[node name="Main menu" type="Node2D" unique_id=2027899902]
+[node name="Main menu" type="Node2D"]
 script = ExtResource("1_28flt")
 metadata/_edit_horizontal_guides_ = [414.0]
 
-[node name="Control" type="Control" parent="." unique_id=687608604]
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorRect" type="ColorRect" parent="Control" unique_id=245700138]
+[node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 659.0
 color = Color(0.549471, 0.6922099, 0.73450315, 1)
 
-[node name="SnowCreator2" type="GPUParticles2D" parent="Control" unique_id=917322263]
+[node name="SnowCreator2" type="GPUParticles2D" parent="Control"]
 position = Vector2(310, 210)
 scale = Vector2(0.11999998, 0.11999998)
 amount = 100
@@ -72,7 +72,7 @@ preprocess = 30.75
 visibility_rect = Rect2(-500, -100, 1500, 400)
 process_material = SubResource("ParticleProcessMaterial_trj04")
 
-[node name="SnowCreator4" type="GPUParticles2D" parent="Control" unique_id=474860464]
+[node name="SnowCreator4" type="GPUParticles2D" parent="Control"]
 position = Vector2(831, 210)
 scale = Vector2(0.3, 0.3)
 amount = 100
@@ -81,7 +81,7 @@ preprocess = 30.75
 visibility_rect = Rect2(-500, -100, 1500, 400)
 process_material = SubResource("ParticleProcessMaterial_trj04")
 
-[node name="SnowCreator3" type="GPUParticles2D" parent="Control" unique_id=150852407]
+[node name="SnowCreator3" type="GPUParticles2D" parent="Control"]
 position = Vector2(536, 132.99998)
 scale = Vector2(0.15, 0.15)
 amount = 100
@@ -90,14 +90,14 @@ preprocess = 30.75
 visibility_rect = Rect2(-500, -100, 1500, 400)
 process_material = SubResource("ParticleProcessMaterial_trj04")
 
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=220964095]
+[node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 0
 offset_left = 16.0
 offset_right = 1150.0
 offset_bottom = 256.0
 texture = ExtResource("11_t1dhk")
 
-[node name="SnowCreator" type="GPUParticles2D" parent="Control" unique_id=864009391]
+[node name="SnowCreator" type="GPUParticles2D" parent="Control"]
 position = Vector2(112, 113)
 scale = Vector2(0.1, 0.1)
 amount = 100
@@ -106,7 +106,7 @@ preprocess = 30.75
 visibility_rect = Rect2(-500, -100, 1500, 400)
 process_material = SubResource("ParticleProcessMaterial_trj04")
 
-[node name="StartButton" type="TextureButton" parent="Control" unique_id=664113724]
+[node name="StartButton" type="TextureButton" parent="Control"]
 layout_mode = 0
 offset_left = 173.0
 offset_top = 133.0
@@ -118,7 +118,7 @@ texture_click_mask = ExtResource("3_opfnp")
 stretch_mode = 3
 script = ExtResource("5_cp0ys")
 
-[node name="Controls" type="TextureButton" parent="Control" unique_id=44892592]
+[node name="Controls" type="TextureButton" parent="Control"]
 layout_mode = 0
 offset_top = 414.0
 offset_right = 1920.0
@@ -128,7 +128,7 @@ texture_normal = ExtResource("2_t1dhk")
 texture_click_mask = ExtResource("3_t1dhk")
 script = ExtResource("4_vtepg")
 
-[node name="Quit" type="TextureButton" parent="Control" unique_id=2065805460]
+[node name="Quit" type="TextureButton" parent="Control"]
 layout_mode = 0
 offset_left = 752.0
 offset_top = 379.0
@@ -139,7 +139,7 @@ texture_normal = ExtResource("5_8dnnj")
 texture_click_mask = ExtResource("6_m3bi6")
 script = ExtResource("7_wyh8j")
 
-[node name="PauseMenu" parent="Control" unique_id=940990709 instance=ExtResource("3_1ehe0")]
+[node name="PauseMenu" parent="Control" instance=ExtResource("3_1ehe0")]
 visible = false
 layout_mode = 0
 offset_left = -83.0
@@ -148,13 +148,13 @@ offset_right = -43.167236
 offset_bottom = -94.0
 scale = Vector2(3.2015502, 3.4849796)
 
-[node name="Button" parent="Control/PauseMenu" index="1" unique_id=1449515953]
+[node name="Button" parent="Control/PauseMenu" index="1"]
 offset_left = 156.79904
 offset_top = 200.00116
 offset_right = 239.79904
 offset_bottom = 231.00116
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=293894462]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_t1dhk")
 
 [connection signal="mouse_entered" from="Control/StartButton" to="Control/StartButton" method="_on_mouse_entered"]

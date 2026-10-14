@@ -25,6 +25,18 @@ My game can also be played on itch (doesnt quite look as good) here:
 
 https://starkbrix.itch.io/cozy-snow-space-cowboy
 
+## Controls
+W= jump
+S= left
+D= right
+F = pickup (go near marshmallows or the gun then press f to pickup)
+Shift = use gun (after picking up)
+Q = pullout marshmallow on stick (do this over the fire to roast it)
+Jump on the fourmyle (grey horse thingo) to ride it
+E = dismount fourmyle
+Left mouse click = shoot
+You can shoot birds, aliens, branches, and cliffs
+
 ## Contribution
 Other people can contribute by letting me know what they like to see or using the project files to expand the world with more mechanics, animals, or biomes. I have pretty big plans for this game 
 
